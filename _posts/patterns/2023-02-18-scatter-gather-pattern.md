@@ -8,7 +8,6 @@ permalink: 'patterns/scatter-gather/'
 counterlink: 'patterns-scatter-gather/'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/patterns/2023-02-18-scatter-gather-pattern/scatter-gather-cover-image.png
-  alt: Image Credit & Copyright - https://www.facebook.com/masterdarksastro & https://www.hansonastronomy.com/
 ---
 
 ## Introduction
