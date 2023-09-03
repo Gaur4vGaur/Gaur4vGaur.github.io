@@ -12,6 +12,8 @@ bundle lock --add-platform x86_64-linux
 # start jekyll server
 bundle exec jekyll serve
 
+# for every blog 
+check NotesForBlogs in BookNotes
 grammar check 
 https://writer.com/grammar-checker/
 https://contentatscale.ai/ai-content-detector/
