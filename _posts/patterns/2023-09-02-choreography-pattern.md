@@ -23,7 +23,19 @@ We have a collection of microservices, where each microservice is responsible fo
 
 To address this challenge, we've introduced the concept of an [orchestrator](https://www.gaurgaurav.com/patterns/orchestration-pattern/#what-is-orchestration-pattern), a central authority tasked with coordinating and streamlining the flow of transactions across these autonomous microservices. But here's the question that looms large: Is this [orchestration pattern](https://www.gaurgaurav.com/patterns/orchestration-pattern/#what-is-orchestration-pattern) a universal solution, or does its effectiveness vary depending on the scenario? To answer this, we need to explore the intricacies and evaluate the costs associated with adopting this pattern.
 
-## What is Orchestration Pattern
+## Avoiding Distributed Monolith Anti-pattern
+While designing for effective microservices architecture, it's crucial to stay clear of what we call the "Distributed Monolith" anti-pattern. This term is often associated with scenarios where the Orchestrator pattern while providing some benefits, can introduce complexities and challenges that might not make it the preferred solution in a few contexts. Let us have a look.
+
+1. **Tightly Coupled Services**<br>
+In the Orchestrator pattern, all services are linked inseparably to the orchestrator. Each service must explicitly receive commands and report back to the orchestrator. This interdependence mandates that the orchestrator possess some domain knowledge about the responsibilities and intricacies of each service.<br>
+Now, envision introducing a new feature to this current business flow. A change in the flow might require the rewire orchestrator, as precise coordination is essential, potentially affecting the existing logic. While a well-structured orchestrator can facilitate this process, such implementations often become complicated to manage over time.
+
+2. **Tightly Coupled Teams**<br>
+One of the primary reasons for adopting a microservices architecture is to expedite development by releasing teams from interdependencies. However, when employing the Orchestrator pattern, an interesting dynamic emerges. Consider a scenario where Team A is busy enhancing a feature while Team B is making updates to their service. Simultaneously, Team C is adding new functionality to the solution. <br>
+Since the orchestrator service tightly couples with all these teams' services, all three teams must collaborate to ensure that their respective changes to the orchestrator service integrate seamlessly with existing and upcoming flows. This coordination often feels like working with monolithic applications, where the teams are bound by release cycles for significant changes.
+
+By proactively recognizing these challenges within the Orchestrator pattern, we can equip ourselves to make informed architectural decisions, ensuring that our microservices ecosystem remains agile, scalable, and efficient. With this anti-pattern, we will encounter all the problems of the monolithic architecture and all the issues of the microservices architecture. Now, the question arises: Is there a pattern that can guide us in designing a solution capable of addressing these complex scenarios?
+
 
 ## Use Case
 
