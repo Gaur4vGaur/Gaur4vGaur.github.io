@@ -47,10 +47,61 @@ This chain of events continues, each microservice gracefully taking its turn unt
 
 
 ## Use Case
+Now that we've established a substantial understanding of the Choreography pattern, let's take a practical scenario to grasp its real-world application. Our example revolves around a dynamic job feed service offered by a recruitment agency. This service streamlines the job-seeking process, offering applicants tailored job opportunities based on their preferences while ensuring a seamless user experience.
+
+Imagine a recruitment agency that invites applicants to share their profiles, job preferences, and resumes via an interactive form hosted on their job feed service. This data serves the agency to continuously search the job market for openings that align with each applicant's unique qualifications and desires. Once relevant jobs are available, the service delivers notifications based on the applicant's preference. Whether it's instant notifications as opportunities arise or a curated digest delivered daily, weekly, or monthly to their email.
+
+Now, let's dissect the complexity of this problem statement into its constituent parts, each representing a sub-domain that plays a unique role in designing the services. These sub-domains lay the foundation for our Choreography pattern implementation, as discussed below:
+
+1. *Job Portal Service* <br>
+Candidates need to sign up as users for the recruitment agency on the Job Portal Service. During registration, they are prompted to provide essential details, outline their preferences, and upload their resumes. The service validates the incoming data and stores the information in the candidate database. Upon successful registration, it then emits an event, such as `CandidateRegistered`, containing user details.
+
+2. *Candidate Profile Service* <br>
+The Candidate Profile Service listens for the `CandidateRegistered` event. When it receives this event, the service fetches and parses the resume and combines it with the information provided by the candidate to create a domain model. The domain model is not just a simple representation; instead, it categorizes the candidates based on their skill set, experience, and job preferences. The service persists this domain model in the candidate profile database, improving the job recommendation engine. It then triggers another event, such as `ProfileCreated`. This event signals the successful creation of the candidate's profile.
+
+3. *Job Recommendation Service* <br>
+The Job Recommendation Service continuously scans candidate profiles and job postings. When the `ProfileCreated` event arrives, it signals the Job Recommendation Service to refresh its cache. The service uses this updated information to create personalized job recommendations for candidates based on their skills and preferences. Once the query is complete and the service has its recommendations ready, it emits another event, such as `OpenJobsFound`, consumed by both the Job Portal Service and the Notification Service. The Job Portal Service adds available open jobs to the candidate's record so that candidates can see them when they log in.
+
+4. *Notification Service* <br>
+The Notification Service subscribes to the `OpenJobsFound` event. The service can immediately notify the applicant about the available job openings. Alternatively, service can accumulate all the available job openings. The service will deliver the accumulated result to the candidate based on their preferences, daily, weekly, or monthly.
+
+
+As we can observe, the entire execution flow operates through asynchronous communication among services, and there is no need for an orchestrator service to oversee the sequence of actions. This pattern offers several advantages. First and foremost, the absence of a central orchestrator service sets the stage for significant cost savings and a reduction in administrative overhead. Secondly, it improves system resilience. Since all events are routed through a message broker, even if one of the services temporarily goes offline, messages will not be lost. When the service is back online, it can seamlessly recover and process events from the message broker as if there were no interruptions.
+
 
 ## Implementation Details
+From the description above, it becomes evident that we require robust integration infrastructure, such as a message broker, empowering us to decouple the application. However, we must define well-thought-out communications between the services.
 
-## Why use Orchestration Pattern
+1.	Command vs. Event <br>
+    The first choice we should make is between a command and an event. A command invokes a specific action in a downstream application. When issued, it implies that the producer has some knowledge of what behaviour the consumer should exhibit. It is worth noticing that command usually targets a single consumer and is much like a one-on-one conversation. It can introduce some level of coupling between the services.
+
+    Conversely, an event signifies something has occurred, leaving it to the downstream systems to decide a course of action in response. Events are not limited to a single consumer; they can have none, one, or even multiple consumers. Does this mean we should wholeheartedly embrace events? However, this decision is not straightforward either and requires further discussion.
+    
+2. Choosing the Right Event Pattern <br>
+  If we prefer events, selecting message patterns can significantly impact the performance. Martin Fowler has published an article on Event-Driven that comprehensively covers the four invaluable strategies, and I will discuss the same here.
+  * Event Notification <br>
+    In the event notification pattern, the publisher emits events to inform downstream systems about changes within its domain. These events are concise notifications, akin to stage whispers, providing minimal information such as an ID and a link for further exploration. The subscriber subscribes to the incoming event and requests additional details from the publisher for appropriate action. Unlike conversation, the publisher typically doesn’t anticipate any response from downstream systems. Event Notification can help reduce coupling and is easy to implement. However, it can become complex when the logical flow splits over multiple event notifications.
+  * Event Notifications with State <br>
+    If we want to reduce the frequent chatter notification between the services, the publisher can send a payload having all the necessary details required for downstream action. Although the pattern reduces the number of calls between systems, it can introduce some complexities. <br>
+    Firstly, when there are multiple subscribers, the publisher faces the challenge of emitting a generic message that accommodates all subscribers. Secondly, this approach places an overhead on subscribers as they must now maintain the state of the data. But it also means that subscribers are self-sufficient and can respond to any incoming request even if the publisher is down.
+  * Event Sourcing <br>
+    While persisting the current state with every notification can solve most problems, there are scenarios when it becomes necessary to understand how we got there. Event sourcing is a pattern that can help in such circumstances as published events persist as records. It means the application preserves the entire event history and can reconstruct its state by replaying these records.
+    Imagine it like version control for the application states that we can use to trace and restore valid states in case of any failure. However, with all these benefits, it adds a layer of complexity to our application. We need to consider the edge cases, such as how to handle old events in scenarios of schema changes.
+  * CQRS <br>
+    Finally, Command Query Responsibility Segregation (CQRS) separates reading from writing operations in an application. Although it may sound appealing, we should only adopt the strategy with careful consideration. Thoroughly researching and understanding the implications and design choices before implementing this pattern is advisable.
+  
+3. Communication Styles & What-ifs <br>
+   Once we have decided on an architectural preference for event patterns, the next step is to choose a communication style. There are three options: *Polling*, where services inquire about updates at set intervals; *Push*, where updates are actively sent to subscribers; and *Pull*, where services fetch updates as needed. Each has its own merits and serves a distinct purpose. <br>
+   We must also prepare for a series of 'what-if' scenarios. What if the message broker experiences a temporary failure? What if a subscriber takes an unexpected intermission? What if a message gets lost in the network? These ' what-ifs' can impact our architectural performance, and we must prepare for these unexpected interruptions.
+
+
+## Why use Choreography Pattern
+The approach is especially beneficial when we need asynchronous communication and loose coupling without an orchestrator. Below are a few scenarios when you should consider using the pattern:
+1.	Consider the pattern when we need to replace or update services frequently. As services operate independently, they interact through asynchronous events. It means we can introduce components gracefully or retire old ones without disrupting the existing services.
+2.	As the application and organization grow, the pattern supports this scaling and expansion. It empowers teams to gracefully scale their efforts, separating concerns and operating autonomously on specific tasks.
+3.	The pattern is a natural choice to implement serverless architecture. It means services are running when an event is triggered. The services consume the incoming event, process their task, and shut down when the operation is complete. It means that we are only charged for what we use, making it a cost-efficient production.
+4.	The pattern isn't just about performance; it's about versatility. It encourages the creation of decoupled, plug-and-play components, each addressing a specific business problem. These components can be reused across different scenarios and seamlessly integrated into the system wherever needed.
+
 
 ## Important Considerations
 
