@@ -13,7 +13,7 @@ image:
 ---
 
 ## Introduction
-In today's rapidly evolving technology landscape, applications migrating to the cloud adopt microservice architecture. The microservice architecture, while offering benefits like scalability, reusability, and adaptability, presents a unique challenge - effectively managing communication among these microservices. Successfully coordinating messages among the services is an essential aspect of designing microservices. There are two popular methodologies available to seamlessly weave together these microservices. The first is [Service Orchestration](https://www.gaurgaurav.com/patterns/orchestration-pattern/), which I described in my last article. This article aims to understand and unravel the pros and cons of the second methodology, the Choreography.
+In today's rapidly evolving technology landscape, applications migrating to the cloud adopt microservice architecture. The microservice architecture, while offering benefits like scalability, reusability, and adaptability, presents a unique challenge - effectively managing communication among these microservices. Successfully coordinating messages among the services is an essential aspect of designing microservices. There are two popular methodologies available to seamlessly weave together these microservices. The first is [Service Orchestration](https://www.gaurgaurav.com/patterns/orchestration-pattern/){:target="_blank"}, which I described in my last article. This article aims to understand and unravel the pros and cons of the second methodology, the Choreography.
 
 
 ## Problem Context
@@ -21,7 +21,7 @@ Is there a one-size-fits-all solution? Can a central orchestrator effectively ma
 
 We have a collection of microservices, where each microservice is responsible for a specific operation or a particular domain. Yet, they operate independently, almost like parallel universes, often unaware of each other's existence. Imagine a user initiating a request like submitting forms or searching a catalogue. These actions set off a series of business transactions that ripple across this microservices cluster. The challenge is clear: How can we ensure these transactions flow seamlessly from one microservice to another, completing a successful business transaction?
 
-To address this challenge, we've introduced the concept of an [orchestrator](https://www.gaurgaurav.com/patterns/orchestration-pattern/#what-is-orchestration-pattern), a central authority tasked with coordinating and streamlining the flow of transactions across these autonomous microservices. But here's the question that looms large: Is this [orchestration pattern](https://www.gaurgaurav.com/patterns/orchestration-pattern/#what-is-orchestration-pattern) a universal solution, or does its effectiveness vary depending on the scenario? To answer this, we need to explore the intricacies and evaluate the costs associated with adopting this pattern.
+To address this challenge, we've introduced the concept of an [orchestrator](https://www.gaurgaurav.com/patterns/orchestration-pattern/#what-is-orchestration-pattern){:target="_blank"}, a central authority tasked with coordinating and streamlining the flow of transactions across these autonomous microservices. But here's the question that looms large: Is this [orchestration pattern](https://www.gaurgaurav.com/patterns/orchestration-pattern/#what-is-orchestration-pattern){:target="_blank"} a universal solution, or does its effectiveness vary depending on the scenario? To answer this, we need to explore the intricacies and evaluate the costs associated with adopting this pattern.
 
 ## Avoiding Distributed Monolith Anti-pattern
 While designing for effective microservices architecture, it's crucial to stay clear of what we call the "Distributed Monolith" anti-pattern. This term is often associated with scenarios where the Orchestrator pattern while providing some benefits, can introduce complexities and challenges that might not make it the preferred solution in a few contexts. Let us have a look.
@@ -78,7 +78,7 @@ From the description above, it becomes evident that we require robust integratio
     Conversely, an event signifies something has occurred, leaving it to the downstream systems to decide a course of action in response. Events are not limited to a single consumer; they can have none, one, or even multiple consumers. Does this mean we should wholeheartedly embrace events? However, this decision is not straightforward either and requires further discussion.
     
 2. Choosing the Right Event Pattern <br>
-  If we prefer events, selecting message patterns can significantly impact the performance. Martin Fowler has published an article on Event-Driven that comprehensively covers the four invaluable strategies, and I will discuss the same here.
+  If we prefer events, selecting message patterns can significantly impact the performance. Martin Fowler has published an article on [Event-Driven](https://martinfowler.com/articles/201701-event-driven.html){:target="_blank"} that comprehensively covers the four invaluable strategies, and I will discuss the same here.
   * Event Notification <br>
     In the event notification pattern, the publisher emits events to inform downstream systems about changes within its domain. These events are concise notifications, akin to stage whispers, providing minimal information such as an ID and a link for further exploration. The subscriber subscribes to the incoming event and requests additional details from the publisher for appropriate action. Unlike conversation, the publisher typically doesn’t anticipate any response from downstream systems. Event Notification can help reduce coupling and is easy to implement. However, it can become complex when the logical flow splits over multiple event notifications.
   * Event Notifications with State <br>
@@ -104,6 +104,11 @@ The approach is especially beneficial when we need asynchronous communication an
 
 
 ## Important Considerations
+In the previous section, we explored the implementations and advantages of using the pattern and how it can provide design flexibility. However, it comes at the cost of managing application flows. This section highlights a few complexities associated with the Choreography pattern:
+1.	Maintaining data consistency and integrity can be a challenge in a choreographed system, especially for an incomplete business transaction when multiple services are required to update related data. The corrupted state might require a manual workaround and an appropriate alerting mechanism. Another approach is to use a service that listens to failed events and applies [compensating transactions](https://en.wikipedia.org/wiki/Compensating_transaction){:target="_blank"}. The aim is to restore the previous valid state. However, we must tread with caution, considering what happens if the compensating transaction also fails.
+2.	As business logic is distributed across multiple services, comprehending the overall system behaviour becomes increasingly challenging with a growing number. This increase underscores the need for up-to-date documentation and a comprehensive solution overview.
+3.	As we work in a distributed environment, we must design the services for error handling and failure recovery. Services bear the responsibility for the seamless execution of entire business transactions along with executing their own operations. Consequently, each service must incorporate good practices such as retries and circuit breakers.
+
 
 ## Summary
 
