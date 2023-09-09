@@ -71,6 +71,21 @@ tail_includes:
     </span>
 
     <div>
+      <!-- page views -->
+      {% if page.counterlink %}
+      <span>
+        <em id="pv" class="pageviews">
+          <em id="count">loading</em>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script>
+              $.getJSON("https://counterapi.com/api/gaurgaurav.com/view/" + '{{ page.counterlink }}', function(response) {
+                document.getElementById("count").innerHTML = String(response.value);
+              });
+          </script>
+        </em>
+        {{ site.data.locales[lang].post.pageview_measure }}
+      </span>
+      {% endif %}
       <!-- read time -->
       {% include read-time.html content=content prompt=true lang=lang %}
     </div>
