@@ -5,7 +5,7 @@ tags: ["cloud", "distributed systems", "design", "scaling"]
 category: ["architecture", "patterns"]
 date: 2023-03-14
 permalink: 'patterns/orchestration-pattern/'
-counterlink: 'patterns-orchestration-pattern/'
+counterlink: 'patterns-orchestration-pattern'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/patterns/2023-03-14-orchestration-pattern/cover-image-orchestration-pattern.jpg
   width: 1200
