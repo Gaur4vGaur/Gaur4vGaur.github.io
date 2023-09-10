@@ -116,5 +116,5 @@ In the previous section, we explored the implementations and advantages of using
 
 
 ## Summary
-The Choreography Pattern is a powerful alternative to the Orchestration Pattern for managing communication in microservices architecture. Its decentralized, event-driven approach empowers microservices to collaborate autonomously, enhancing system scalability, agility, and resilience. By embracing the Choreography Pattern, organizations can unlock the full potential of microservices while gracefully navigating the challenges of distributed systems.
+The Choreography Pattern is a powerful alternative to the Orchestration Pattern for addressing communication in a microservices architecture. Its decentralized, event-driven approach empowers microservices to collaborate autonomously, enhancing system scalability, agility, and resilience. By adopting the Choreography Pattern, organizations can unlock the maximum potential of microservices while navigating the challenges of distributed systems.
 
