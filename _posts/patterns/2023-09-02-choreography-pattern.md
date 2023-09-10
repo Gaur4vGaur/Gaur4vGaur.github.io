@@ -33,12 +33,16 @@ Now, envision introducing a new component to this business flow to address one o
 One of the primary reasons for adopting a microservices architecture is to expedite development by releasing teams from interdependencies. However, when employing the Orchestration Pattern, an interesting dynamic emerges. Consider a scenario where Team A is busy enhancing a feature while Team B is making updates to their service. Simultaneously, Team C is adding new functionality to the solution. <br>
 Since the orchestrator service tightly couples with all these teams' services, all three teams must collaborate to ensure that their respective changes to the orchestrator service integrate seamlessly with existing and upcoming flows. This coordination often feels like working with monolithic applications, where the teams are bound by release cycles for significant changes.
 
+![Distributed Monolith Anti-pattern](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/patterns/2023-09-02-choreography-pattern/DistributedMonolithAnti-pattern.png)*Impact of Distributed Monolith Anti-pattern*
+
 By proactively recognizing these challenges within the Orchestration Pattern, we can equip ourselves to make informed architectural decisions, ensuring that our microservices ecosystem remains agile, scalable, and efficient. With this anti-pattern, we will encounter all the problems of the monolithic architecture and all the issues of the microservices architecture. Now, the question arises: Is there a pattern that can guide us in designing a solution capable of addressing these complex scenarios?
 
 ## Exploring the Choreography Pattern
 In contrast to the Orchestration Pattern's centralized conductor, the Choreography Pattern utilizes a dumb message broker. This shift promotes loose coupling among microservices, untangling the web of interdependencies. Now, every microservice becomes an autonomous contributor, deciding when and how to execute its steps.
 
 Imagine the Choreography Pattern as a graceful dance choreography. In a dance, performers receive instructions on how to execute their steps, yet each dancer retains individual responsibility for their performance. Similarly, this pattern directs seamless business processes for microservices, where each service takes its cue, much like a dancer following their choreographer.
+
+![Exploring the Choreography Pattern](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/patterns/2023-09-02-choreography-pattern/exploringChoreographyPattern.png)*Comparing Orchestration Pattern and Choreography Pattern*
 
 In this collection of microservices, every participant subscribes to relevant events broadcasted by the message broker. When a client initiates a request, the request seamlessly finds its way to the appropriate microservice, which processes it and emits the result as another event.
 
@@ -53,7 +57,7 @@ The recruitment agency invites applicants to share their profiles, job preferenc
 Now, let's dissect the complexity of this problem statement into its constituent parts, each representing a sub-domain that plays a unique role in designing the entire solution. These sub-domains lay the foundation for our Choreography Pattern implementation, as discussed below:
 
 1. *Job Portal Service* <br>
-Candidates need to sign up as users for the recruitment agency on the front end of Job Portal Service. During registration, they are prompted to provide essential details, outline their preferences, and upload their resumes. The service validates the incoming data and stores the information in the candidate database. Upon successful registration, it then emits an event, such as `CandidateRegistered`, containing user details.
+Candidates need to sign up as users for the recruitment agency on the web page of Job Portal Service. During registration, they are prompted to provide essential details, outline their preferences, and upload their resumes. The service validates the incoming data and stores the information in the candidate database. Upon successful registration, it then emits an event, such as `CandidateRegistered`, containing user details.
 
 2. *Candidate Profile Service* <br>
 The Candidate Profile Service listens for the `CandidateRegistered` event. When it receives this event, the service fetches and parses the resume and combines it with the other information provided by the candidate to create a domain model. The domain model is not just a simple representation of applicant's data; instead, it categorizes the candidates based on their skill set, experience, and job preferences. The service persists this domain model in the candidate profile database, improving the job recommendation engine. It then triggers another event, such as `ProfileCreated`. This event signals the successful creation of the candidate's profile.
@@ -64,6 +68,7 @@ The Job Recommendation Service continuously scans candidate profiles and job pos
 4. *Notification Service* <br>
 The Notification Service subscribes to the `OpenJobsFound` event. The service can immediately notify the applicant about the available job openings. Alternatively, service can accumulate all the available job openings. The service will deliver the accumulated result to the candidate based on their preferences, daily, weekly, or monthly.
 
+![Choreography Pattern Use Case](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/patterns/2023-09-02-choreography-pattern/ChoreographyPatternUseCase.png)*Recruitment Agency Business Service Flow*
 
 As we can observe, the entire execution flow operates through asynchronous communication among services, and there is no need for an orchestrator service to oversee the sequence of actions. This pattern offers several advantages. First and foremost, the absence of a central orchestrator service sets the stage for significant cost savings and a reduction in administrative overhead. Secondly, it improves system resilience. Since all events are routed through a message broker, even if one of the services temporarily goes offline, messages will not be lost. When the service is back online, it can seamlessly recover and process events from the message broker as if there were no interruptions.
 
