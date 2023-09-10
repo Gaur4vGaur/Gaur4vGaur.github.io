@@ -1,6 +1,6 @@
 ---
-title: 'Choreography Pattern: <TODO>'
-description: <TODO>
+title: 'Choreography Pattern: Optimizing Communication in Distributed Systems'
+description: Explore the Choreography Pattern and discover how it can optimize communication in distributed systems. Learn key concepts, best practices, and real-world applications to enhance system efficiency.
 tags: ["cloud", "distributed systems", "design", "scaling"]
 category: ["architecture", "patterns"]
 date: 2023-09-02
