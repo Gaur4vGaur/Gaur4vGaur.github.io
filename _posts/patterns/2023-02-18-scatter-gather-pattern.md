@@ -5,7 +5,7 @@ tags: ["cloud", "distributed systems", "design", "scaling"]
 category: ["architecture", "patterns"]
 date: 2023-02-18
 permalink: 'patterns/scatter-gather/'
-counterlink: 'patterns-scatter-gather/'
+counterlink: 'patterns-scatter-gather'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/patterns/2023-02-18-scatter-gather-pattern/scatter-gather-cover-image.png
 ---

@@ -5,7 +5,7 @@ tags: ["scala", "jvm", "microbenchark"]
 category: ["programming", "tutorial"]
 date: 2021-04-18
 permalink: 'java/scala-benchmarking-jmh/'
-counterlink: 'scala-benchmarking-jmh/'
+counterlink: 'scala-benchmarking-jmh'
 ---
 
 ### Introduction

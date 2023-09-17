@@ -3,7 +3,7 @@ title: Benefits of CI - Decrease code review time
 description: A thought on how well thought through CI pipeline can help in code reviews. Article to share thoughts on benefits for continuous integration. CI pipeline can help developers to review the code more effectively.
 date: 2017-01-17
 permalink: 'ciBlogs/benefits-of-ci-decrease-code-review-time/'
-counterlink: 'ciBlogs-benefits-of-ci-decrease-code-review-time/'
+counterlink: 'ciBlogs-benefits-of-ci-decrease-code-review-time'
 ---
 
 Sometimes, we work in teams where code churn is high. Multiple developers working on features in the same code base, and there is a pressure of delivery. In these high-pressure situations reviewing code becomes critical. However, the pressure of delivery pushes the team to merge the code as soon as possible.

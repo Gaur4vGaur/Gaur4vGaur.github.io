@@ -5,7 +5,7 @@ tags: ["cloud", "distributed systems", "design", "scaling"]
 category: ["architecture", "patterns"]
 date: 2023-01-28
 permalink: 'patterns/pipes-and-filters/'
-counterlink: 'patterns-pipes-and-filters/'
+counterlink: 'patterns-pipes-and-filters'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/patterns/2023-01-28-pipes-and-filters-pattern/pipesAndFiltersCover.png
   width: 800

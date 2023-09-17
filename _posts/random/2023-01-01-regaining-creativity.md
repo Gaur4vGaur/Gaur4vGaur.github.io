@@ -5,7 +5,7 @@ tags: ["creativity", "stress free", "ITlife"]
 category: ["experience"]
 date: 2023-01-01
 permalink: '2023/random/regaining-creativity/'
-counterlink: '2023-random-regaining-creativity/'
+counterlink: '2023-random-regaining-creativity'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/random/2023-01-01-regaining-creativity-2023/cover-image.jpeg
   width: 800

@@ -5,7 +5,7 @@ tags: ["microservices", "design"]
 category: ["architecture", "microservices"]
 date: 2017-10-15
 permalink: 'microservices/designing-automated-microservices/'
-counterlink: 'microservices-designing-automated-microservices/'
+counterlink: 'microservices-designing-automated-microservices'
 ---
 
 
