@@ -26,7 +26,7 @@ Thus, a better migration would be to refactor the entire application and break i
 
 
 ## What is Orchestration Pattern
-We have designed an appropriate architecture where all services operate within their [bounded context](http://ddd.fed.wiki.org/view/bounded-context). However, we still need a component that is aware of the entire business workflow. The missing element is responsible for generating the final response by communicating with all of the services. Think of it like an orchestra with musicians playing their instruments. In an orchestra, a central conductor coordinates and aligns the members to produce a final performance.
+We have designed an appropriate architecture where all services operate within their [bounded context](https://martinfowler.com/bliki/BoundedContext.html). However, we still need a component that is aware of the entire business workflow. The missing element is responsible for generating the final response by communicating with all of the services. Think of it like an orchestra with musicians playing their instruments. In an orchestra, a central conductor coordinates and aligns the members to produce a final performance.
 
 The Orchestration Pattern also introduces a centralized controller or service known as the orchestrator, similar to a central conductor. The orchestrator does not perform business logic but manages complex business flows by calling independently deployed services, handling exceptions, retrying requests, maintaining state, and returning the final response.
 
