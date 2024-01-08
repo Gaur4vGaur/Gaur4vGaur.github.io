@@ -1,10 +1,10 @@
 ---
 title: Making Better Decisions in Busy World
-description: 
+description: Conquer decision fatigue in your hectic world. Explore strategies to navigate life's chaos and make sound decisions amidst a busy world. Discover insightful tips and practical advice for enhancing your decision-making skills on Gaur Gaurav's blog
 tags: ["decision fatigue", "productivity", "ITlife"]
 category: ["experience"]
 date: 2024-01-08
-permalink: '2023/random/making-better-decisions-in-busy-world/'
+permalink: '2024/random/making-better-decisions-in-busy-world/'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/random/2024-01-08-making-better-decisions-in-busy-world/cover-image.jpg
   width: 800
