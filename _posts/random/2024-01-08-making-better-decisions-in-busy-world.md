@@ -48,7 +48,7 @@ To ensure we are operating at our best, we must either avoid decision fatigue or
 But apart from holding the mental energy, we can also refill it by taking regular breaks, especially when we notice signs of fatigue. I actively keep an eye out for these signals. For example, whenever I find myself easily distracted during work, I know something is going wrong. If I am checking phone notifications or skimming through news headlines more than I should, it is a clear sign that I have lost interest. Forcing myself to power through the task despite a lack of interest will drain my willpower unnecessarily. It is a clear signal for me to pause, take a breather, glance out the window, and get some fresh air.
 
 
-Another effective method for me has been the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique). It's all about laser-focused work intervals. I lock into a 25-minute Google timer session, shutting down all notifications to banish distractions. No emails or Slack pings—just me and the task at hand. Then, after that intense session, I take a quick 5-minute breather. Trust me, after these power-packed sessions, I've consistently found myself more productive and less drained.
+Another effective method for me has been the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique){:target="_blank"}. It's all about laser-focused work intervals. I lock into a 25-minute Google timer session, shutting down all notifications to banish distractions. No emails or Slack pings—just me and the task at hand. Then, after that intense session, I take a quick 5-minute breather. Trust me, after these power-packed sessions, I've consistently found myself more productive and less drained.
 
 
 ## Final Words
