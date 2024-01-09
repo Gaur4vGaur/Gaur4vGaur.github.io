@@ -42,7 +42,7 @@ As decision-making fatigue mounts so does stress. This piled-up stress can lead 
 
 
 ## From Overwhelmed to Optimized
-To ensure we are operating at our best, we must either avoid decision fatigue or design ways to recover. World leaders like Obama and Zuckerberg have their strategies to combat [decision fatigue](https://www.psychologytoday.com/gb/blog/stretching-theory/202309/is-decision-fatigue-real){:target="_blank"}, keeping things simple with daily routines that preserve mental energy for critical decisions. Stealing their proven techniques could serve as an excellent starting point.
+To ensure we are operating at our best, we must either avoid decision fatigue or design ways to recover. World leaders like Obama and Zuckerberg have their [strategies to combat decision fatigue](https://www.psychologytoday.com/gb/blog/stretching-theory/202309/is-decision-fatigue-real){:target="_blank"}, keeping things simple with daily routines that preserve mental energy for critical decisions. Stealing their proven techniques could serve as an excellent starting point.
 
 
 But apart from holding the mental energy, we can also refill it by taking regular breaks, especially when we notice signs of fatigue. I actively keep an eye out for these signals. For example, whenever I find myself easily distracted during work, I know something is going wrong. If I am checking phone notifications or skimming through news headlines more than I should, it is a clear sign that I have lost interest. Forcing myself to power through the task despite a lack of interest will drain my willpower unnecessarily. It is a clear signal for me to pause, take a breather, glance out the window, and get some fresh air.
