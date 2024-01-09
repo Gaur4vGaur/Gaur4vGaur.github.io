@@ -52,7 +52,7 @@ Another effective method for me has been the [Pomodoro Technique](https://en.wik
 
 
 ## Final Words
-The research and articles I referenced above suggest interesting hacks like avoiding late-day decision-making or simplifying our wardrobe to identical plain t-shirts and suits. But hey, not all studies have the same findings. For instance, in a [study led by Stanford psychologist Carol Dweck and her colleagues](https://www.pnas.org/doi/full/10.1073/pnas.1313475110#F1){:target="_blank"}, she concluded that waning willpower was apparent only in participants who believed willpower was a finite resource.
+The research and articles I referenced above suggest interesting hacks like avoiding late-day decision-making or simplifying decisions such as wardrobe with identical plain t-shirts and suits. But hey, not all studies have the same findings. For instance, in a [study led by Stanford psychologist Carol Dweck and her colleagues](https://www.pnas.org/doi/full/10.1073/pnas.1313475110#F1){:target="_blank"}, she concluded that waning willpower was apparent only in participants who believed willpower was a finite resource.
 
 
 Decision-making isn't a one-size-fits-all deal. While cutting down on small choices can save time and enhance efficiency, rigid routines might feel monotonous, confining, or impossible for some. Regardless, buying into the idea of limited decisiveness or willpower probably won't do us any favour. Instead, I would say acknowledging that mental energy is a depleting resource and can drain over time, like a muscle that fatigues with exercise, can be practical to avoid exhaustion. I wish you more power in the year 2024. Happy New Year!
