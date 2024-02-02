@@ -2,7 +2,7 @@
 title: 'The Future is Cloud Native: Are You Ready?'
 description: description
 tags: ["cloud", "cloud native"]
-category: ["cloud native", "article"]
+category: ["cloud native"]
 date: 2024-02-01
 permalink: '/cloud_native/the-future-is-cloud-native/'
 image:
@@ -12,15 +12,21 @@ image:
 ---
 
 
-Cloud-native technologies empower us to operate increasingly larger and more complex systems at scale. It is a modern approach to designing, building, and deploying applications that can fully capitalize on the benefits of the cloud. The goal is to allow organizations to innovate swiftly and respond effectively to market demands.
+## Introduction
+Cloud-native technologies empower us to produce increasingly larger and more complex systems at scale. It is a modern approach to designing, building, and deploying applications that can fully capitalize on the benefits of the cloud. The goal is to allow organizations to innovate swiftly and respond effectively to market demands.
 
 ## Why go cloud native?
+
+### Agility and Flexibility
+Organizations often migrate to the cloud for the enhanced agility and the speed it offers. The ability to set up thousands of servers in minutes contrasts sharply with the weeks it typically takes for on-premises operations. Immutable infrastructure provides confidence in configurable and secure deployments and help reduce time to market.
+
+### Scalable Components
 Cloud-native applications are more than just hosting the applications on the cloud. The approach promotes the adoption of microservices, serverless and containerized applications, and involves breaking down applications into several independent services. These services integrate seamlessly through APIs and event-based messaging, each serving a specific function.
 
+### Resilient Solutions
 Orchestration tools manage the lifecycle of components, handling tasks such as resource management, load balancing, scheduling, restarts after internal failures, and provisioning and deploying resources to server cluster nodes. According to the [2023 annual survey conducted by the Cloud Native Computing Foundation](https://www.cncf.io/reports/cncf-annual-report-2023/){:target="_blank"}, cloud-native technologies, particularly Kubernetes, have achieved widespread adoption within the cloud-native community. Kubernetes continues to mature, signifying its prevalence as a fundamental building block for cloud-native architectures.
 
-Organizations often migrate to the cloud for the enhanced agility and the speed it offers. The ability to set up thousands of servers in minutes contrasts sharply with the weeks it typically takes for on-premises operations. Immutable infrastructure provides confidence in configurable and secure deployments.
-
+### Security-First Approach
 Cloud-native culture integrates security as a shared responsibility throughout the entire IT lifecycle. Cloud-native promotes security shift left in the process. Security must be a part of application development and infrastructure right from the start and not an afterthought. Even after product deployment, security should be the top priority, with constant security updates, credential rotation, virtual machine rebuilds and proactive monitoring.
 
 
