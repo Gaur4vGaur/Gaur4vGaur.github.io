@@ -12,9 +12,8 @@ image:
 ---
 
 
-Cloud-native technologies empower us to produce increasingly larger and more complex systems at scale. It is a modern approach to designing, building, and deploying applications that can fully capitalize on the benefits of the cloud. The goal is to allow organizations to innovate swiftly and respond effectively to market demands.
-
 ## Why go cloud native?
+Cloud-native technologies empower us to produce increasingly larger and more complex systems at scale. It is a modern approach to designing, building, and deploying applications that can fully capitalize on the benefits of the cloud. The goal is to allow organizations to innovate swiftly and respond effectively to market demands.
 
 #### Agility and Flexibility
 Organizations often migrate to the cloud for the enhanced agility and the speed it offers. The ability to set up thousands of servers in minutes contrasts sharply with the weeks it typically takes for on-premises operations. Immutable infrastructure provides confidence in configurable and secure deployments and helps reduce time to market.
