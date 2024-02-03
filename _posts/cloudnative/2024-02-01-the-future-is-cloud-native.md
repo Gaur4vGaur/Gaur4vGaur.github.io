@@ -1,6 +1,6 @@
 ---
 title: 'The Future is Cloud Native: Are You Ready?'
-description: Uncover insights into the transformative power of Cloud Native solutions and discover why embracing the cloud-native approach is key to staying ahead in the ever-evolving tech landscape. Dive into the future of innovation and scalability
+description: Uncover insights into the transformative power of Cloud Native solutions and discover why embracing the cloud-native approach is key to staying ahead in ever-evolving tech landscape. Dive into the future of innovation and scalability
 tags: ["cloud", "cloud native"]
 category: ["cloud native"]
 date: 2024-02-01
@@ -17,7 +17,7 @@ Cloud-native technologies empower us to produce increasingly larger and more com
 ## Why go cloud native?
 
 #### Agility and Flexibility
-Organizations often migrate to the cloud for the enhanced agility and the speed it offers. The ability to set up thousands of servers in minutes contrasts sharply with the weeks it typically takes for on-premises operations. Immutable infrastructure provides confidence in configurable and secure deployments and help reduce time to market.
+Organizations often migrate to the cloud for the enhanced agility and the speed it offers. The ability to set up thousands of servers in minutes contrasts sharply with the weeks it typically takes for on-premises operations. Immutable infrastructure provides confidence in configurable and secure deployments and helps reduce time to market.
 
 #### Scalable Components
 Cloud-native applications are more than just hosting the applications on the cloud. The approach promotes the adoption of microservices, serverless and containerized applications, and involves breaking down applications into several independent services. These services integrate seamlessly through APIs and event-based messaging, each serving a specific function.
