@@ -18,7 +18,7 @@ Imagine building a complex machine with numerous independent parts, each perform
 These finely grained services engage in internal and external interactions, employing various communication methods, synchronous or asynchronous. In synchronous communication, a service invokes another service using HTTP or gRPC, awaiting a response within a specified timeframe before proceeding. Conversely, asynchronous communication involves exchanging messages without expecting an immediate response. Message brokers such as RabbitMQ or Kafka serve as intermediaries, buffering messages to ensure reliable delivery. In cloud-native applications, embracing a combination of communication patterns is often a practical approach. Let's begin with synchronous communications first.
 
 
-## What is Synchronous Communication?
+## What is Synchronous Communication
 Synchronous communication is like a conversation. One service (let’s call it Service A) initiates a request and then waits for a response from another service (Service B) or external APIs. This is akin to asking a question and waiting for an answer. Service A sends a request over HTTP and waits. It’s either waiting for a response from Service B or for a maximum waiting time to expire. During this waiting period, Service A is temporarily blocked, much like a person who pauses their activities to wait for a response. This pattern, often referred to as a request-reply pattern, is relatively simple to implement. However, using it extensively can introduce challenges that require careful consideration.
 
 ![Synchronous communication in cloud](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/cloudnative/decoding-synchronous-and-asynchronous-communication-in-cloud-native-applications/Synchronous.png)*Synchronous communication in cloud*
@@ -53,7 +53,7 @@ When maintaining data consistency across multiple components is vital, synchrono
 
 Synchronous communication is a powerful tool and has its challenges. The good news is that we also have the option of asynchronous communication—a complementary style that can work alongside synchronous methods. Let us explore this further in the next section.
 
-## What is Asynchronous Communication?
+## What is Asynchronous Communication
 Asynchronous communication patterns offer a dynamic and efficient approach to inter-service communication. Unlike synchronous communication, asynchronous communication allows a service to initiate a request without awaiting an immediate response. In this model, responses may not be immediate or arrive asynchronously on a separate channel, such as a callback queue. This mode of communication relies on protocols like the Advanced Message Queuing Protocol (AMQP) and messaging middleware, including message brokers or event brokers. 
 
 This messaging middleware acts as an intermediary with minimal business logic. It receives messages from the source or producer service and then channels them to the intended consuming service. Integrating message middleware can significantly boost the resilience and fault tolerance of this decoupled approach. Asynchronous communication encompasses various implementations. Let us explore those further.
