@@ -34,7 +34,7 @@ Service definitions act as living documentation for the service and can help red
 As I mentioned earlier, the first step is to find a service that can help to achieve a specific functionality. Developers often do this by asking questions over Slack or in forums. However, this process is inadequate and can be streamlined through a service registry.
 A service registry maintains a list of available services and stores information such as service name, location (IP and ports), health status, and metadata. This centralized approach helps consumers efficiently find and interact with the services they need in real-time.
 
-![Service Regitry to expose Service Definition](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/cloudnative/2024-04-15-navigating-cloud-native-components-using-service-registry-and-definitions/ServiceRegistry.png)*Service Regitry to expose Service Definition*
+![Service Registry to expose Service Definition](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/cloudnative/2024-04-15-navigating-cloud-native-components-using-service-registry-and-definitions/ServiceRegistry.png)*Service Registry to expose Service Definition*
 
 
 ### Guide to Using the Service Registry
@@ -61,7 +61,7 @@ The data format follows a specific structure defined by a common schema. Since c
 ### Schema Registry: The Centralized Schema Storage
 Like services in synchronous messaging, this shared messaging contract must be easily discoverable. To achieve this, producer and consumer services utilize a centralized metadata registry to store the schemas. Let's dive deep into the schema registry process guide.
 
-![Schema Regitry to expose Schema Definition](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/cloudnative/2024-04-15-navigating-cloud-native-components-using-service-registry-and-definitions/SchemaRegistry.png)*Schema Regitry to expose Schema Definition*
+![Schema Registry to expose Schema Definition](https://raw.githubusercontent.com/Gaur4vGaur/traveller/master/images/cloudnative/2024-04-15-navigating-cloud-native-components-using-service-registry-and-definitions/SchemaRegistry.png)*Schema Registry to expose Schema Definition*
 
 ### Guide to Using the Schema Registry
 - **Schema Definition**: When a new service is deployed, it defines the message schemas using a preferred format like Apache Avro, Protocol Buffers, or JSON Schema. This schema defines the structure of the messages, including the data types of fields.
