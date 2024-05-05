@@ -1,7 +1,7 @@
 ---
 title: 'The Future is Cloud Native: Are You Ready?'
 description: Uncover insights into the transformative power of Cloud Native solutions and discover why embracing the cloud-native approach is key to staying ahead in ever-evolving tech landscape. Dive into the future of innovation and scalability
-tags: ["cloud", "cloud native"]
+tags: ["cloud", "cloud native", "distributed systems"]
 category: ["cloud native"]
 date: 2024-02-01
 permalink: '/cloud_native/the-future-is-cloud-native/'

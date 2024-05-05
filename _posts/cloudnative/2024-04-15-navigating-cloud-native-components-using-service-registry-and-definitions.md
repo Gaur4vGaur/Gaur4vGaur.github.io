@@ -1,7 +1,7 @@
 ---
 title: 'Navigating Cloud Native Components: Using Service Registry and Definitions'
 description: Explore the Service Registry and Service Definitions, crucial components in cloud-native architecture for efficient, reliable, and scalable applications. It explains their role in synchronous and asynchronous communication.
-tags: ["cloud", "api", "communication pattern"]
+tags: ["cloud", "api", "communication pattern", "microservices", "distributed systems", "scalability"]
 category: ["cloud native", "communication"]
 date: 2024-04-15
 permalink: '/cloud_native/navigating-cloud-native-components-using-service-registry-and-definitions/'

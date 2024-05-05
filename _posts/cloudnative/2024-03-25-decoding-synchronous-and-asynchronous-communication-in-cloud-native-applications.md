@@ -1,8 +1,8 @@
 ---
 title: 'Decoding Synchronous and Asynchronous Communication in Cloud-Native Applications'
 description: Explore synchronous and asynchronous communication in cloud-native applications. A guide to understand their use cases, challenges, and strategic application in system design.
-tags: ["cloud", "cloud native", "communication pattern"]
-category: ["cloud native"]
+tags: ["cloud", "cloud native", "communication pattern", "microservices", "distributed systems", "scalability"]
+category: ["cloud native", "communication"]
 date: 2024-03-25
 permalink: '/cloud_native/decoding-synchronous-and-asynchronous-communication-in-cloud-native-applications/'
 image:
