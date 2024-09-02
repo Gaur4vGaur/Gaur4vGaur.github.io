@@ -22,6 +22,6 @@ check NotesForBlogs in BookNotes
     Then use $ npm install -g win-node-env
 3. Command 1 can also give error "[!] Error: Cannot find module '@rollup/plugin-babel'"
     Then use $ npm install @rollup/plugin-babel --save-dev
-4. Once assets are generate add them to git using $ git add assets/js/dist -f
+4. Once assets are generate add them to git using $ git add assets/js/dist _sass/dist -f
 Wiki guide line for the same - https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide
 5. npm install -g concurrently
