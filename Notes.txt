@@ -25,3 +25,6 @@ check NotesForBlogs in BookNotes
 4. Once assets are generate add them to git using $ git add assets/js/dist _sass/dist -f
 Wiki guide line for the same - https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide
 5. npm install -g concurrently
+npm install -g rollup
+npm install -g purgecss
+npm install @rollup/plugin-babel
