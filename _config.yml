@@ -22,7 +22,7 @@ description: >- # used by seo meta and the atom feed
   A blog to share coding practices, programming tutorials, application design opinions, analysis and personal experiences by Gaurav Gaur
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://www.gaurgaurav.com'
+url: 'https://gaurgaurav.com'
 
 github:
   username: Gaur4vGaur             # change to your github username
@@ -60,7 +60,7 @@ analytics:
   google:
     id: UA-162427596-1
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: gaurgaurav
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
