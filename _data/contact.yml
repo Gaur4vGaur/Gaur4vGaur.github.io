@@ -3,12 +3,12 @@
 # - type: github
 #  icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+# - type: twitter
+  # icon: "fa-brands fa-x-twitter"
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+# - type: email
+  # icon: "fas fa-envelope"
+  # noblank: true # open link in current tab
 
 - type: rss
   icon: "fas fa-rss"
@@ -16,6 +16,10 @@
 
 - type: whatsapp
   icon: 'fa-brands fa-whatsapp'
+  url: 'https://whatsapp.com/channel/0029Vaa3KAp7YSd2X7cIrX0q'
+
+- type: whatsapp
+  icon: 'fa-solid fa-bell'
   url: 'https://whatsapp.com/channel/0029Vaa3KAp7YSd2X7cIrX0q'
 # Uncomment and complete the url below to enable more contact options
 #
