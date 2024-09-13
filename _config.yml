@@ -22,7 +22,7 @@ description: >- # used by seo meta and the atom feed
   A blog to share coding practices, programming tutorials, application design opinions, analysis and personal experiences by Gaurav Gaur
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://gaurgaurav.com'
+url: 'https://www.gaurgaurav.com'
 
 github:
   username: Gaur4vGaur             # change to your github username
