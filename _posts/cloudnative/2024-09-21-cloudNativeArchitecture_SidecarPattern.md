@@ -9,7 +9,6 @@ image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2024-09-21-cloudNativeArchitecture_SidecarPattern/hidde-schalm-38FLdKhz_rM-unsplash.jpg
   width: 800
   height: 500
-  alt: Photo by [hidde schalm](https://unsplash.com/@hdsfotografie95?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
 ---
 
 
@@ -71,3 +70,8 @@ While the sidecar pattern enjoys several advantages, it's equally important to b
 Offloading cross-cutting concerns to sidecars creates more modular, reusable, and maintainable services. As with any pattern of architecture, one needs to balance benefits against potential overhead and the level of complexity it introduces. Used correctly, the sidecar can greatly simplify distributed architecture while retaining flexibility and scalability.
 
 As the cloud-native architecture continues to evolve, the sidecar pattern will undoubtedly remain an important strategy for dealing with the increasing complexity of distributed systems.
+
+__Photo Credits__<br>
+<sup>Header page image by <a href="https://unsplash.com/@hdsfotografie95?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">hidde schalm</a> on Unsplash</sup><br>
+
+ 
