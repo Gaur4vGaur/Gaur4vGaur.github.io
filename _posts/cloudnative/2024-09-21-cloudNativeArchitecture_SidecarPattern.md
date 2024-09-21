@@ -39,18 +39,18 @@ Since these sidecars can take care of logging, tracing, or metrics gathering qui
 
 ## Key Use Cases for the Sidecar Pattern
 
-### - Service Meshes
+### Service Meshes
 One of the most well-known usages of the sidecar pattern is service meshes, such as Istio or Linkerd. The sidecar proxy (Envoy, for example) manages networking concerns such as routing, load balancing, retries, and even security between services - for example, mutual TLS. The sidecar provides a transparent layer of control without changing application code.
 
 ![Sidecar managing interservice communication](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2024-09-21-cloudNativeArchitecture_SidecarPattern/SidecarCommunication.png)*Sidecar managing interservice communication*
 
-### - Security Enhancements
+### Security Enhancements
 Various security policies could be implemented via sidecars, including secret management, certificate rotation, or data encryption. As a specific example, mutual authentication between services can be handled by a sidecar, keeping sensitive data transmissions secure.
 
-### - Monitoring & Logging
+### Monitoring & Logging
 Centralized logging can run in sidecar containers, such as Fluentd or Logstash, which collect and forward logs to a central server, abstracting log management from the application. Similarly, a monitoring sidecar exposes an application's metrics to a monitoring system like Prometheus.
 
-### - Configuration Management
+### Configuration Management
 One of the use cases for sidecars is to dynamically load and inject configuration data into the main application. This is useful when configurations need to change at runtime and without restarting the main service.
 
 ## Things to Consider when Using Sidecar Pattern
