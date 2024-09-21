@@ -1,7 +1,7 @@
 ---
 title: 'Exploring the Sidecar Pattern in Cloud-Native Architecture'
-description: 
-tags: ["cloud", "distributed systems"]
+description: Explore the Sidecar Pattern in cloud-native architecture, a powerful design strategy that offloads non-core functionalities to a sidecar container, improving scalability, modularity, and observability.
+tags: ["cloud", "cloud native", "distributed systems", "communication pattern", "scalability"]
 category: ["cloud native", "communication"]
 date: 2024-09-21
 permalink: '/cloudNativeArchitecture_SidecarPattern'
@@ -42,6 +42,8 @@ Since these sidecars can take care of logging, tracing, or metrics gathering qui
 
 ### - Service Meshes
 One of the most well-known usages of the sidecar pattern is service meshes, such as Istio or Linkerd. The sidecar proxy (Envoy, for example) manages networking concerns such as routing, load balancing, retries, and even security between services - for example, mutual TLS. The sidecar provides a transparent layer of control without changing application code.
+
+![Sidecar managing interservice communication](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2024-09-21-cloudNativeArchitecture_SidecarPattern/SidecarCommunication.png)*Sidecar managing interservice communication*
 
 ### - Security Enhancements
 Various security policies could be implemented via sidecars, including secret management, certificate rotation, or data encryption. As a specific example, mutual authentication between services can be handled by a sidecar, keeping sensitive data transmissions secure.
