@@ -6,7 +6,7 @@ category: ["advanced java", "programming", "tutorial"]
 date: 2024-12-19
 permalink: '/advancedJava_journeyThrough'
 image:
-  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2024-09-21-cloudNativeArchitecture_SidecarPattern/hidde-schalm-38FLdKhz_rM-unsplash.jpg
+  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/java/2024-12-19-advancedJava_journeyThrough.jpg
   width: 800
   height: 500
 ---
