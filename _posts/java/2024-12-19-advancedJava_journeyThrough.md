@@ -18,9 +18,9 @@ In software development, professionals are always learning. Programming language
 Whether one is an experienced Java developer or a newcomer venturing into its complex functionalities, this series is purposed to render advanced concepts both accessible and applicable. These features are not just theoretical constructs but instruments for crafting more maintainable, resilient, and contemporary Java applications. Consider this series as a thoughtfully organized pathway aimed at enhancing proficiency in Java.
 
 
-#### Why Now?
+## Why Now?
 
-With the release of Java 21, a number of improvements and new features are in store for review. Oracle's commitment to regular releases-a new minor version every six months, with major long-term support releases every few years-means that Java is always up-to-date and relevant. While I will be working with Java 21, rest assured that the concepts we will discuss will remain relevant for multiple versions, including those that have not yet been released.
+With the release of Java 21, a number of improvements and new features are in store for review. Oracle's commitment to regular releases-a new minor version every six months, with major long-term support releases every few years-means that Java is always up-to-date and relevant. While I will be working with Java 21, but the concepts I discuss will remain relevant to newer versions as well.
 
 The following is an overview of what is coming in this series:
 
@@ -34,13 +34,13 @@ The following is an overview of what is coming in this series:
 * **Optional Type:** Writing null-free code that's safer and more intentional, too.
 * **Try-with-Resources Statement:** Gracefully managing resources with style and elegance.
 
-Each of these topics will be explained in a separate article, with examples, explanations, and context. I want to share not just how to use them but why these features work like they do, so you can use them confidently in your projects.
+I will try to explain each of these topics in separate articles, with examples, explanations, and context. I want to share not just how to use them but why these features work like they do.
 
 
 ## Let us Learn Together
 Learning advanced Java features may be a little intimidating, but remember: every expert was once a beginner. In this series of blog posts, I hope to create a shared space for learning where we can explore, experiment, and grow together as Java enthusiasts.
 
-So get your favourite IDE and let's dive deep into the Java world. The first post is coming very soon.
+So get your favourite IDE and let's dive deep into the Java world. I will publish my first post soon.
 
 
  
