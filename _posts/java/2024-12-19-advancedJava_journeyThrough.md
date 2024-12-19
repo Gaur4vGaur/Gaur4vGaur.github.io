@@ -12,7 +12,7 @@ image:
 ---
 
 
-## Advanced Java Features: An Overview
+## Overview
 In software development, professionals are always learning. Programming languages change, and at the same time, this creates new ways to write better, cleaner, and more effective code. Java is a language that has lasted over time and still keeps amazing us with its depth and flexibility. Until recently, I had decided to upgrade myself with the advanced features of Java and was excited to share this journey with you in this series of blog posts.
 
 Whether you are an experienced Java developer or a newcomer trying to explore these functionalities, the series aims to present the concepts in an easy-to-understand and practically applicable fashion. These features are not just theoretical constructs but instruments for developing more resilient, proficient and maintainable Java applications.
@@ -22,6 +22,8 @@ Whether you are an experienced Java developer or a newcomer trying to explore th
 
 With the release of Java 21, a number of improvements and new features are in store for review. Oracle's commitment to regularly release a new minor version every six months and major long-term support releases every few years means that Java is always up-to-date and relevant. While I will be practising with Java 21, the concepts I discuss will definitely be relevant to any version of Java.
 
+
+## What to Expect?
 The following is an overview of what is coming in this series:
 
 * **Records:** Elegant encoding of data carrier classes.
