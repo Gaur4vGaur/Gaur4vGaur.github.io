@@ -1,7 +1,7 @@
 ---
-title: 'A Journey through Advance Java Features'
+title: 'A Journey through Advanced Java Features'
 description: Explore advanced Java features with in-depth series on Java 21. Learn about records, sealed classes, pattern matching, and more to enhance your coding skills and create robust Java applications.
-tags: ["advancejava"]
+tags: ["advancedjava"]
 category: ["advanced java", "programming", "tutorial"]
 date: 2024-12-19
 permalink: '/advancedJava_journeyThrough'
@@ -13,9 +13,9 @@ image:
 
 
 ## Advanced Java Features: An Overview
-In software development, professionals are always learning. Programming languages change, and at the same time, this creates new ways to write better, cleaner, and more effective code. Java is a language that has lasted over time and still keeps amazing us with its depth and flexibility. Until recently, I had decided to tinker a bit more with the advanced features of Java and was excited to share that journey with you in this series of blog posts.
+In software development, professionals are always learning. Programming languages change, and at the same time, this creates new ways to write better, cleaner, and more effective code. Java is a language that has lasted over time and still keeps amazing us with its depth and flexibility. Until recently, I had decided to upgrade myself with the advanced features of Java and was excited to share this journey with you in this series of blog posts.
 
-Whether one is an experienced Java developer or a newcomer venturing into its complex functionalities, this series is purposed to render advanced concepts both accessible and applicable. These features are not just theoretical constructs but instruments for crafting more maintainable, resilient, and contemporary Java applications. Consider this series as a thoughtfully organized pathway aimed at enhancing your proficiency in Java.
+Whether one is an experienced Java developer or a newcomer venturing into its complex functionalities, this series is purposed to render advanced concepts both accessible and applicable. These features are not just theoretical constructs but instruments for crafting more maintainable, resilient, and contemporary Java applications. Consider this series as a thoughtfully organized pathway aimed at enhancing proficiency in Java.
 
 
 #### Why Now?
