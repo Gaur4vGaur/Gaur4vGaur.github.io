@@ -15,12 +15,12 @@ image:
 ## Advanced Java Features: An Overview
 In software development, professionals are always learning. Programming languages change, and at the same time, this creates new ways to write better, cleaner, and more effective code. Java is a language that has lasted over time and still keeps amazing us with its depth and flexibility. Until recently, I had decided to upgrade myself with the advanced features of Java and was excited to share this journey with you in this series of blog posts.
 
-Whether one is an experienced Java developer or a newcomer venturing into its complex functionalities, this series is purposed to render advanced concepts both accessible and applicable. These features are not just theoretical constructs but instruments for crafting more maintainable, resilient, and contemporary Java applications. Consider this series as a thoughtfully organized pathway aimed at enhancing proficiency in Java.
+Whether you are an experienced Java developer or a newcomer trying to explore these functionalities, the series aims to present the concepts in an easy-to-understand and practically applicable fashion. These features are not just theoretical constructs but instruments for developing more resilient, proficient and maintainable Java applications.
 
 
 ## Why Now?
 
-With the release of Java 21, a number of improvements and new features are in store for review. Oracle's commitment to regular releases-a new minor version every six months, with major long-term support releases every few years-means that Java is always up-to-date and relevant. While I will be working with Java 21, but the concepts I discuss will remain relevant to newer versions as well.
+With the release of Java 21, a number of improvements and new features are in store for review. Oracle's commitment to regularly release a new minor version every six months and major long-term support releases every few years means that Java is always up-to-date and relevant. While I will be practising with Java 21, the concepts I discuss will definitely be relevant to any version of Java.
 
 The following is an overview of what is coming in this series:
 
@@ -38,7 +38,7 @@ I will try to explain each of these topics in separate articles, with examples, 
 
 
 ## Let us Learn Together
-Learning advanced Java features may be a little intimidating, but remember: every expert was once a beginner. In this series of blog posts, I hope to create a shared space for learning where we can explore, experiment, and grow together as Java enthusiasts.
+Learning advanced Java features may feel like a draining journey. In this series of blog posts, I hope to create a shared space for learning where we can explore, experiment, and grow together as Java enthusiasts.
 
 So get your favourite IDE and let's dive deep into the Java world. I will publish my first post soon.
 
