@@ -1,0 +1,66 @@
+---
+title: 'Understanding Immutable Data Objects in Java <TODO - change title>'
+description: <TODO - need meta description>
+tags: ["advancedjava"] <TODO - more tags>
+category: ["advanced java", "programming", "tutorial"]
+date: 2024-12-20 <TODO - update date>
+permalink: '/advancedJava_journeyThrough' <TODO>
+image:
+  path: <TODO>
+  width: 800
+  height: 500
+---
+
+
+## What is Immutability?
+Before I discuss records and why they are needed, I need to articulate the concept of immutability. Immutability is a key aspect of clean and safe programming.
+
+ Let us define immutability - an immutable object is an object whose state cannot be changed once instantiated, where the state is the data contained in the object instance. When an object's state is set, it stays the same throughout its lifetime. In Java, for example, immutable objects do not have any setter methods to guarantee their state never changes.
+
+
+### Examples of Immutable Objects
+
+Java’s standard library is rich with immutable classes, including:
+
+* `String`
+* Wrapper classes for primitives (e.g. `Integer`, `Double`)
+* `BigInteger` and `BigDecimal`
+* Date and time classes from the `java.time` package
+
+These classes demonstrate the effectiveness of immutability in various contexts, from text processing to complex arithmetic and date-time manipulation.
+
+## Why Choose Immutability?
+Immutability is considered as best practice in many scenarios:
+
+* **Simplified Reasoning**: 
+Immutable objects make programs easier to understand and debug. When an object’s state cannot change unexpectedly, you can reason about its behaviour with confidence.
+
+* **Thread Safety**: 
+In multi-threaded environments, immutable objects shine. They are inherently thread-safe, eliminating the need for complicated synchronization mechanisms.
+
+* **Reliability in Collections**: 
+Immutable objects are perfect for use as keys in `HashMap` or elements in `HashSet` because their hash codes never change, ensuring data integrity.
+
+* **Performance and Memory Efficiency**: 
+Immutable objects can often be shared and reused, reducing memory overhead. For example, the JVM’s string pool allows reusing `String` objects to save memory and enhance performance. Java also reuse any existing objects while autoboxing and wrapping primitive values.
+
+
+## Challenges of Immutability
+
+While immutability has many advantages, it’s not without trade-offs:
+
+* **Efficiency Concerns**: 
+Modifying immutable objects is done by creating new instances. This, under certain conditions, leads to serious performance issues; for example, the concatenation of strings within a loop does not work well since every time a new `String` instance will be created. A better approach is to use `StringBuilder`, which is designed to mutate for such scenarios.
+
+* **Circular References**: 
+Creating circular references among immutable objects can present challenges. For example, when objects X and Y are required to reference one another. If objects are mutable, that is easy, initialise the fields at the time of creation. But, accomplishing this while preserving immutability is a challenge. It becomes a chicken-and-egg problem, where Object A must initialise with reference to B which does not exist yet and vice versa.
+I can argue that it is not really a disadvantage as circular references are a code smell and show coupling.
+
+These challenges notwithstanding, the benefits of immutability often outweigh its costs. Immutability promotes better design by avoiding problems such as tightly coupled classes, and it encourages separation of concerns.
+
+## Wrap Up
+The Broader View Immutability is not a feature; it's a mindset. By leveraging immutable objects, you write code that is more predictable, maintainable, and robust. As a Java developer, understanding when and how to apply immutability effectively is a vital skill that will raise your craft. Stay tuned as we look at the advanced features of Java in our upcoming posts, where we will explore how immutability and other design principles make our code cleaner and more efficient. Happy coding!
+
+
+
+ 
