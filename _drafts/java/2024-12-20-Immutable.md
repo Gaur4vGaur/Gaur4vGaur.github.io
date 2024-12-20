@@ -121,12 +121,64 @@ There is a list of rules that we need to apply to make the above class immutable
 Now that I know, what needs to be done, let me action it next.
 
 ### Immutable `Product`
+Here is the immutable `Product`.
 
+As you can observe, there are quite a few considerations and the code is verbose. Although a lot of code I have generated is through my IDE, it is still verbose.
+
+```java
+public final class Product {
+
+    private final long id;
+    private final String name;
+    private final String description;
+
+    public Product(long id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id == product.id && Objects.equals(name, product.name) && Objects.equals(description, product.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, description);
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+}
+
+```
  
 
 
 ## Wrap Up
-The Broader View Immutability is not a feature; it's a mindset. By leveraging immutable objects, you write code that is more predictable, maintainable, and robust. As a Java developer, understanding when and how to apply immutability effectively is a vital skill that will raise your craft. Stay tuned as we look at the advanced features of Java in our upcoming posts, where we will explore how immutability and other design principles make our code cleaner and more efficient. Happy coding!
+By leveraging immutable objects, you write code that is more predictable, maintainable, and robust. But there are easier ways to achieve all of the above. This is where `Record` classes come in handy and allow the creation of immutable objects much easier. In my next post, I will introduce and discuss `Record` classes.
 
 
 
