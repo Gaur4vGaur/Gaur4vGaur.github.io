@@ -4,7 +4,7 @@ description:
 tags: ["advancedjava"] 
 category: ["advanced java", "programming", "tutorial"]
 date: 2024-12-22
-permalink: '/advancedJava_understandingImmutability' <TODO>
+permalink: '/advancedJava_understandingImmutability'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/java/2024-12-22-advancedJava_understandingImmutability.jpg
   width: 800
