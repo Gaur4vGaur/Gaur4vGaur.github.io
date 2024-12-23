@@ -56,3 +56,5 @@ I can argue that it is not really a disadvantage as circular references are a co
 
 These challenges notwithstanding, the benefits of immutability often outweigh its costs. Immutability promotes better design by avoiding problems such as tightly coupled classes, and it encourages separation of concerns.
 
+__Photo Credits__<br>
+<sup>Header page image by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on Unsplash</a></sup><br>
