@@ -58,7 +58,7 @@ These challenges notwithstanding, the benefits of immutability often outweigh it
 
 ## Creating an Immutable Class
 
-### Sample `Product` POJO
+### Sample Product POJO
 Let me first create a usual POJO `Product` class that contains information about the product. I will add below three attributes to the class
 * `id` of type `long` to uniquely identify the product
 * `name` of type `string` to hold the name of the product
@@ -113,11 +113,11 @@ There is a list of rules that we need to apply to make the above class immutable
 * I will make all fields `final` and `private`.
 * I will make the class `final` to restrict mutable subclasses and use override methods.
 * I will make sure that instance fields do not have any reference to mutable objects (I will cover this in detail in later articles).
-* Finally, I will also provide `equals`, `hashCode` and `toString` methods for this class.
+* Finally, I will also provide `equals()`, `hashCode()` and `toString()` methods for this class.
 
 Now that I know, what needs to be done, let me action it next.
 
-### Immutable `Product`
+### Immutable Product
 Here is the immutable `Product`.
 
 As you can observe, there are quite a few considerations and the code is verbose. Although a lot of code I have generated is through my IDE, it is still verbose.
