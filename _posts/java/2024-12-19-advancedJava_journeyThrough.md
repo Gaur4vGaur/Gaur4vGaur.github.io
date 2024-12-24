@@ -2,7 +2,7 @@
 title: 'A Journey through Advanced Java Features'
 description: Explore advanced Java features with in-depth series on Java 21. Learn about records, sealed classes, pattern matching, and more to enhance your coding skills and create robust Java applications.
 tags: ["advancedjava"]
-category: ["advanced java", "programming", "tutorial"]
+category: ["programming", "advanced java", "tutorial"]
 date: 2024-12-19
 permalink: '/advancedJava_journeyThrough'
 image:
