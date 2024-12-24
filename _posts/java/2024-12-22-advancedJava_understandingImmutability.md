@@ -1,7 +1,7 @@
 ---
 title: 'Understanding Immutable Objects in Java'
-description: 
-tags: ["advancedjava"] 
+description: Explore advanced Java concepts with this in-depth guide to understanding immutability. Learn how immutability enhances thread safety, performance, and design in Java applications.
+tags: ["advancedjava", "immutability", "programmingconcepts", "codequality"] 
 category: ["advanced java", "programming", "tutorial"]
 date: 2024-12-22
 permalink: '/advancedJava_understandingImmutability'
@@ -115,7 +115,7 @@ There is a list of rules that we need to apply to make the above class immutable
 * I will make sure that instance fields do not have any reference to mutable objects (I will cover this in detail in later articles).
 * Finally, I will also provide `equals()`, `hashCode()` and `toString()` methods for this class.
 
-Now that I know, what needs to be done, let me action it next.
+Now that I know, what needs to be done, I will move on to it next.
 
 ### Immutable Product
 Here is the immutable `Product`.
@@ -175,7 +175,7 @@ public final class Product {
 
 
 ## Wrap Up
-By leveraging immutable objects, you write code that is more predictable, maintainable, and robust. But there are easier ways to achieve all of the above. This is where `Record` classes come in handy and allow the creation of immutable objects much easier. In my next post, I will introduce and discuss `Record` classes.
+By leveraging immutable objects, you write more predictable, maintainable, and robust code. But there are easier ways to achieve all of the above. This is where `Record` classes come in handy and allow the creation of immutable objects much easier. In my next post, I will introduce and discuss `Record` classes.
 
 __Photo Credits__<br>
 <sup>Header page image by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on Unsplash</sup><br>
