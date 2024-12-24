@@ -2,7 +2,7 @@
 title: 'Understanding Immutable Objects in Java'
 description: Explore advanced Java concepts with this in-depth guide to understanding immutability. Learn how immutability enhances thread safety, performance, and design in Java applications.
 tags: ["advancedjava", "immutability", "programmingconcepts", "codequality"] 
-category: ["advanced java", "programming", "tutorial"]
+category: ["programming", "advanced java", "tutorial"]
 date: 2024-12-22
 permalink: '/advancedJava_understandingImmutability'
 image:
@@ -10,7 +10,7 @@ image:
   width: 800
   height: 500
 ---
-
+  
 ## What is Immutability?
 Before I discuss records and why they are needed, I need to articulate the concept of immutability. Immutability is a key aspect of clean and safe programming.
 
