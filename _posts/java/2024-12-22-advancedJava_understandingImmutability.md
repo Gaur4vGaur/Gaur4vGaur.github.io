@@ -175,7 +175,7 @@ public final class Product {
 
 
 ## Wrap Up
-By leveraging immutable objects, you write more predictable, maintainable, and robust code. But there are easier ways to achieve all of the above. This is where `Record` classes come in handy and allow the creation of immutable objects much easier. In my [next post](https://www.gaurgaurav.com/2024_advancedJava_exploringRecordClasses), I will introduce and discuss `Record` classes.
+By leveraging immutable objects, you write more predictable, maintainable, and robust code. But there are easier ways to achieve all of the above. This is where `Record` classes come in handy and allow the creation of immutable objects much easier. In my [next post](https://www.gaurgaurav.com/2024_advancedJava_exploringRecordClasses){:target="_blank"}, I will introduce and discuss `Record` classes.
 
 __Photo Credits__<br>
 <sup>Header page image by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on Unsplash</sup><br>
