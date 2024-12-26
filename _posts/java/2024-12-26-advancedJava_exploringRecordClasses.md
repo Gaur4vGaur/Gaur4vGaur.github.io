@@ -12,7 +12,7 @@ image:
 ---
 
 
-Records are a way to produce immutable data classes in a much easier way. These are not a standard feature in Java. Continuing from my previous post on [immutable objects](https://www.gaurgaurav.com/advancedJava_understandingImmutability), I will try to explore Record classes with examples.
+Records are a way to produce immutable data classes in a much easier way. These are not a standard feature in Java. Continuing from my previous post on [immutable objects](https://www.gaurgaurav.com/advancedJava_understandingImmutability){:target="_blank"}, I will try to explore Record classes with examples.
 
 ## What Are Record Classes?
 Record classes are a special kind of Java classes designed to simplify the creation of data-carrying classes. They are ideal for classes that are primarily used to store data and have minimal behaviour. A record class automatically generates boilerplate code such as constructors, getters, equals(), hashCode(), and toString() methods.
@@ -23,7 +23,7 @@ Record classes are a special kind of Java classes designed to simplify the creat
 *	**Automatic Method Generation**: Java automatically generates essential methods like equals(), hashCode(), and toString(), reducing boilerplate code and potential errors.
 
 ## Creating Record Class
-I will convert the previous [immutable `Product` class](https://www.gaurgaurav.com/advancedJava_understandingImmutability#immutable-product) into a record class with the same fields. Let me rewrite it to show the difference.
+I will convert the previous [immutable `Product` class](https://www.gaurgaurav.com/advancedJava_understandingImmutability#immutable-product){:target="_blank"} into a record class with the same fields. Let me rewrite it to show the difference.
 
 ```java
 public record Product(long id, String name, String description) {}
