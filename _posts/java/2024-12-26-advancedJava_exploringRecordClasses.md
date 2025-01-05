@@ -1,6 +1,6 @@
 ---
 title: 'Exploring Record Classes in Java'
-description: 
+description: Explore the power of Java Record Classes in this detailed guide. Learn how they simplify immutable data handling, boost readability, and enhance your advanced Java development skills with practical examples. Ideal for modern developers!
 tags: ["advancedjava", "records", "programmingconcepts", "recordclasses"] 
 category: ["programming", "advanced java", "tutorial"]
 date: 2024-12-26
