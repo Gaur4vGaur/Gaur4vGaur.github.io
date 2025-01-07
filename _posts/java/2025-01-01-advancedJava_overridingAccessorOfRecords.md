@@ -6,7 +6,7 @@ category: ["programming", "advanced java", "tutorial"]
 date: 2025-01-01
 permalink: '/2025_advancedJava_overridingAccessorOfRecords'
 image:
-  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/java/2024-12-26-advancedJava_exploringRecordClasses.jpg
+  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/java/2025-01-01-advancedJava_overridingAccessorOfRecords.jpg
   width: 800
   height: 500
 ---
