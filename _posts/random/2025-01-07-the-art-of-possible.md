@@ -1,6 +1,6 @@
 ---
 title: The Art of Possible
-description: Discover how creativity, curiosity, and a childlike sense of wonder can inspire innovation in software development. Explore lessons from Legos, real-world coding challenges, and the art of turning ideas into impactful solutions.
+description: Discover how creativity, curiosity, and a childlike sense can inspire innovation in software development. The blog is about lessons from Legos, real-world use-case, and the art of turning ideas into impactful solutions.
 tags: ["creativity", "innovation", "ITlife"]
 category: ["experience"]
 date: 2025-01-07
