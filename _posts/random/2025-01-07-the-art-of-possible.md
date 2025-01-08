@@ -39,6 +39,8 @@ I scheduled a demo with the client. To my delight, the prototype worked flawless
 ## The Power of Curiosity
 I am not entirely sure what initially drew my attention to that new feature, but I'm glad it did. My likely thought process would have been "Ahh! This is cool, but does it have a practical use case? Is it any useful?" And given the new opportunity, I saw the potential.
 
+![Programmers Box](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/random/2025-01-07-the-art-of-possible/programmers%20toolbox.jpg)*Programmers Box*
+
 Being curious and open has helped me a lot in my career, and it still does. Today we are in a time full of possibilities and potential, especially with the advance of artificial intelligence, machine learning, and LLMs. The future looks good, and there are endless opportunities.
 
 I want to finish my thoughts by saying that whether it is building with Legos or making new software, creativity comes from curiosity, exploration, and asking, "*What if?*" My nephew's endless excitement for creating reminded me that, at its heart, our job is just as much about play as it is about purpose.
@@ -46,7 +48,7 @@ We, as developers, can change business ideas into real solutions. We connect wha
 
 I wish you a great *2025* and will conclude the article with an inspiring quote from one of the greatest thinkers that ever lived.
 
-> Imagination is more important than knowledge. For knowledge is limited, whereas imagination encircles the world.
+> **Imagination is more important than knowledge. For knowledge is limited, whereas imagination encircles the world.**
 >
 > -- <cite>Albert Einstein</cite>
 
