@@ -19,5 +19,5 @@ Every Lego structure, every drawing, and every little craft project came with it
 I was struck by how these simple toys and tools became, in his hands, gateways to limitless creativity. Watching him reminded me of the pure joy and freedom that come with creating something entirely your own.
 
 
-![Creativity Box](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/random/2025-01-07-the-art-of-possible/the-art-of-possible_nephew.jpg)*8-year-old's creativity box*
+![Creativity Box](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/random/2025-01-07-the-art-of-possible/the-art-of-possible_nephew_small.jpg)*8-year-old's creativity box*
 
