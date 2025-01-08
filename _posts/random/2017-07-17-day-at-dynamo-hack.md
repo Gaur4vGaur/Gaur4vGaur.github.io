@@ -5,7 +5,6 @@ tags: ["d17hack", "dynamo", "hackathon", "northeast"]
 category: ["experience"]
 date: 2017-07-17
 permalink: 'random/day-at-dynamo-hack/'
-counterlink: 'random-day-at-dynamo-hack'
 ---
 
 
