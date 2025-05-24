@@ -42,7 +42,7 @@ At first, deep learning neural networks were used mostly to classify things. Lat
 I will continue this discussion in part 2 of the article.
 
 
-## Footnote
+## References
 
-[^footnote]: <a href=https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a>
-[^fn-nth-2]: LeCun, Y., Bengio, Y. & Hinton, G. Deep learning. Nature 521, 436–444 (2015). <a href=https://doi.org/10.1038/nature14539" target="_blank">
+[^footnote]: [Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson](https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp){:target="_blank"}
+[^fn-nth-2]: [LeCun, Y., Bengio, Y. & Hinton, G. Deep learning. Nature 521, 436–444 (2015)](https://doi.org/10.1038/nature14539){:target="_blank"}
