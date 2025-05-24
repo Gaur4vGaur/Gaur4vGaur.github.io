@@ -19,20 +19,16 @@ And now AI seems to be appearing everywhere, and its applications are only getti
 But as soon as I started reading about AI, I came across many new terminologies. Some clicked right away, and others left me scratching my head. So, my first goal is to wrap my head around these everyday AI basics.
 
 ## Machine Learning
-When I was in high school, I was fond of chess and wanted to get better at it. So, my father bought me a gaming console with Battle Chess[^fn-nth-2]. I played that game over and over again for a week, and each time it beat me. I started to wonder if the thing in the box was smarter than me. As it turns out, the console was not necessarily smarter than me; it was just a whole lot faster. A smart developer had coded IF-ELSE Boolean statements. All these statements were pre-programmed. Whenever I made a move, the machine would speed through its logic to calculate its next best position. The logic was good enough to beat me but was just rule-based [4]. The developers would need a chess master to write their logic.
-Decades later, Google developed a computer program AlphaZero [2]. The program can learn games without being taught by humans. The algorithm can do much more than just playing chess. It has mastered Shogi and Go, games so complex that they cannot be programmed using simple IF-ELSE logic. AlphaZero uses a method of deep learning called artificial neural networks, which is a form of machine learning.
+When I was in high school, I was fond of chess and wanted to get better at it. So, my father bought me a gaming console with Battle Chess[^fn-nth-2]. I played that game over and over again for a week, and each time it beat me. I started to wonder if the thing in the box was smarter than me. As it turns out, the console was not necessarily smarter than me; it was just a whole lot faster. A smart developer had coded IF-ELSE Boolean statements. All these statements were pre-programmed. Whenever I made a move, the machine would speed through its logic to calculate its next best position. The logic was good enough to beat me but was just rule-based[^fn-nth-3]. The developers would need a chess master to write their logic.
+
+Decades later, Google developed a computer program AlphaZero[^fn-nth-4]. The program can learn games without being taught by humans. The algorithm can do much more than just playing chess. It has mastered Shogi and Go, games so complex that they cannot be programmed using simple IF-ELSE logic. AlphaZero uses a method of deep learning called artificial neural networks, which is a form of machine learning.
 Machine learning is now not only restricted to these games; we are experience it every day, even if we do not realize it. Websites like Amazon suggest new products you might want to purchase, or Netflix recommends movies you might like-that is machine learning in play. Unlike traditional programming, where developers must tell a machine exactly what to do, these advanced algorithms can learn by analysing data. The more data we provide them, the better they are at making predictions and decisions.
+
 Newer machine learning systems are far more superior than simple logic statements. These deep learning systems are inspired from human brains, which consists of interconnected neurons. As a general-purpose technology, machine learning can potentially be used in various fields, from politics to DNA sequencing
 
 
 __Reference__<br>
-<sup><a href="https://github.com/openjdk/jmh" target="_blank">JMH Github</a></sup><br>
-<sup><a href="https://shipilev.net/talks/devoxx-Nov2013-benchmarking.pdf" target="_blank">Devoxx-Nov2013 Slides</a></sup><br>
-<sup><a href="https://github.com/google/caliper/wiki/JavaMicrobenchmarks" target="_blank">Google Caliper Github</a></sup><br>
-<sup><a href="https://www.oracle.com/technical-resources/articles/java/architect-benchmarking.html" target="_blank">Oracle Avoiding Benchmarking Pitfalls on the JVM</a></sup>
-
-
-## Reverse Footnote
-
-[^footnote]: <a href="https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a>
-[^fn-nth-2]: <a href="https://en.wikipedia.org/wiki/Battle_Chess" target="_blank">Battle Chess</a>
+[^footnote]: <sup><a href="https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a></sup>
+[^fn-nth-2]: <sup><a href="https://en.wikipedia.org/wiki/Battle_Chess" target="_blank">Battle Chess</a></sup>
+[^fn-nth-3]: <sup><a href="https://en.wikipedia.org/wiki/Rule-based_system" target="_blank">Rule Based System</sup>
+[^fn-nth-4]: <sup><a href="https://en.wikipedia.org/wiki/AlphaZero" target="_blank">Alpha Zero</sup>
