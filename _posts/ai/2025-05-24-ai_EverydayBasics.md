@@ -44,5 +44,5 @@ I will continue this discussion in part 2 of the article.
 
 ## References
 
-[^footnote]: [Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson](https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp){:target="_blank"}
+[^footnote]: [Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson](https://books.google.co.uk/books/about/Machine_Platform_Crowd_Harnessing_Our_Di.html?id=zh1DDQAAQBAJ&redir_esc=y){:target="_blank"}
 [^fn-nth-2]: [LeCun, Y., Bengio, Y. & Hinton, G. Deep learning. Nature 521, 436–444 (2015)](https://doi.org/10.1038/nature14539){:target="_blank"}
