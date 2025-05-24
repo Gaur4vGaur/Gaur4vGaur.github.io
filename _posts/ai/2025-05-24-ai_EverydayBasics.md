@@ -32,8 +32,17 @@ Towards the end of my explanation above about machine learning, I briefly mentio
 
 Let me try to explain the concept with an example. I was working on a website where I released a new feature of feedback. During the peak season, we got feedback from thousands of customers, however, it was humanly impossible to read each feedback. By the time we could have digested the feedback collected, there was another wave of feedback. Now, this was a website which was operating with in a country. Consider worldwide web at global scale. We are talking about trillions of words, billions of images, and billions of hours of video and audio. Now the challenge was how can organisations get value from that data?  This is commonly called as __“big data”__ problem. It is like a you are in a middle of a rainstorm, but you have no containers to catch the water.
 
+## Deep Learning: Learning from massive datasets
+Towards the end of 2011, people began to talk about deep learning. It is a machine learning technique that uses deep layers of artificial neural network. Imagine a sandwich making factory with assembly line. Each layer of workers is responsible for a specific task: slicing bread, adding meat, adding salad, adding sauce and packaging. 
+
+The layers do not know the final order, they build on the top of previous layer, until the sandwich is complete as per the customer request. If a customer complains – “I asked for a chicken, not pork”, the chain works backward to find the flaw and retrains the workers. Over time, the assembly line gets better to consistently produce the perfect sandwich. 
+
+At first, deep learning neural networks were used mostly to classify things. Later, in 2017, Google announced [AlphaGo](https://en.wikipedia.org/wiki/AlphaGo){:target="_blank"}, the system it created to play “Go” mentioned previously. AlphaGo could taught and learn itself to play and develop incredibly complex strategies to win. Since then, has continued to evolve, these deep learning algorithms are used to perform all kinds of predictive machine learning. You could classify customers based on their buying behaviour. Forecast inventory to predict when a product might sell out. And not even that, now we are heading towards self-driving cars. The cards that can “see” and analyse their surroundings to predict how to best drive. Artificial neural networks remain a dominant form of AI.[^fn-nth-2]
+
+I will continue this discussion in part 2 of the article.
 
 
 ## Footnote
 
 [^footnote]: <a href="https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a>
+[^fn-nth-2]: LeCun, Y., Bengio, Y. & Hinton, G. Deep learning. Nature 521, 436–444 (2015). <a href="https://doi.org/10.1038/nature14539" target="_blank">
