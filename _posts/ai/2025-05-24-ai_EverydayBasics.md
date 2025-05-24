@@ -27,8 +27,9 @@ Machine learning is now not only restricted to these games; we are experience it
 Newer machine learning systems are far more superior than simple logic statements. These deep learning systems are inspired from human brains, which consists of interconnected neurons. As a general-purpose technology, machine learning can potentially be used in various fields, from politics to DNA sequencing
 
 
-__Reference__<br>
-[^footnote]: <sup><a href="https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a></sup>
-[^fn-nth-2]: <sup><a href="https://en.wikipedia.org/wiki/Battle_Chess" target="_blank">Battle Chess</a></sup>
-[^fn-nth-3]: <sup><a href="https://en.wikipedia.org/wiki/Rule-based_system" target="_blank">Rule Based System</sup>
-[^fn-nth-4]: <sup><a href="https://en.wikipedia.org/wiki/AlphaZero" target="_blank">Alpha Zero</sup>
+## Reverse Footnote
+
+[^footnote]: <a href="https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a></sup>
+[^fn-nth-2]: <a href="https://en.wikipedia.org/wiki/Battle_Chess" target="_blank">Battle Chess</a></sup>
+[^fn-nth-3]: <a href="https://en.wikipedia.org/wiki/Rule-based_system" target="_blank">Rule Based System</a></sup>
+[^fn-nth-4]: <a href="https://en.wikipedia.org/wiki/AlphaZero" target="_blank">Alpha Zero</a></sup>
