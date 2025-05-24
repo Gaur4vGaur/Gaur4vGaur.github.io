@@ -29,7 +29,7 @@ Newer machine learning systems are far more superior than simple logic statement
 
 ## Reverse Footnote
 
-[^footnote]: <a href="https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a></sup>
-[^fn-nth-2]: <a href="https://en.wikipedia.org/wiki/Battle_Chess" target="_blank">Battle Chess</a></sup>
-[^fn-nth-3]: <a href="https://en.wikipedia.org/wiki/Rule-based_system" target="_blank">Rule Based System</a></sup>
-[^fn-nth-4]: <a href="https://en.wikipedia.org/wiki/AlphaZero" target="_blank">Alpha Zero</a></sup>
+[^footnote]: <sup><a href="https://www.getabstract.com/en/summary/machine-platform-crowd/30901?u=bp" target="_blank">Machine, Platform, Crowd Free Review by Andrew McAfee and Erik Brynjolfsson</a></sup>
+[^fn-nth-2]: <sup><a href="https://en.wikipedia.org/wiki/Battle_Chess" target="_blank">Battle Chess</a></sup>
+[^fn-nth-3]: <sup><a href="https://en.wikipedia.org/wiki/Rule-based_system" target="_blank">Rule Based System</a></sup>
+[^fn-nth-4]: <sup><a href="https://en.wikipedia.org/wiki/AlphaZero" target="_blank">Alpha Zero</a></sup>
