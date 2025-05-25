@@ -1,5 +1,5 @@
 ---
-title: The Building Blocks of AI: Part 1
+title: The Building Blocks of AI - Part 1
 description: Explore the fundamentals of Artificial Intelligence in beginner-friendly guide. Learn the basics of machine learning, deep learning, big data, and how AI differs from traditional programming. Perfect for developers starting their AI journey.
 tags: ["ai_basics"]
 category: ["ai"]
