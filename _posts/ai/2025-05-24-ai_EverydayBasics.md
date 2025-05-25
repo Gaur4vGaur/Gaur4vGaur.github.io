@@ -1,10 +1,10 @@
 ---
-title: AI Everday Basics - Part 1 <TODO>
-description: <TODO>
-tags: [<TODO>]
+title: The Building Blocks of AI: Part 1
+description: Explore the fundamentals of Artificial Intelligence in beginner-friendly guide. Learn the basics of machine learning, deep learning, big data, and how AI differs from traditional programming. Perfect for developers starting their AI journey.
+tags: ["ai_basics"]
 category: ["ai"]
 date: 2025-05-24
-permalink: '2025/ai/TODO/'
+permalink: '2025/ai/the-building-blocks-part1/'
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/random/2025-01-07-the-art-of-possible/cover.jpg
   width: 800
