@@ -6,7 +6,7 @@ category: ["ai"]
 date: 2025-05-24
 permalink: '2025/ai/the-building-blocks-part1/'
 image:
-  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/random/2025-01-07-the-art-of-possible/cover.jpg
+  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_EverydayBasics.jpg
   width: 800
   height: 500
 ---
