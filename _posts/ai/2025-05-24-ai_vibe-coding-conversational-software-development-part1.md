@@ -19,7 +19,7 @@ Natural language can now be translated directly into functional software. The co
 ![End-to-end experience with chat-based AI development](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/end-to-end-experience-chat-based-builders.png
 )*End-to-end experience with chat-based AI development*
 
-The term Vibe Coding was popularized in early 2025 by researcher Andrej Karpathy, known for his work in Open API and Tesla. Vibe Coding is the process of describing goals in natural language, letting advanced models handle implementation, and iterating quickly without worrying too much about the underlying code. In short - you describe, and large language models generate and refine. [^footnote]
+The term Vibe Coding was popularized in early 2025 by researcher [Andrej Karpathy](https://en.wikipedia.org/wiki/Andrej_Karpathy){:target="_blank"}, known for his work in Open API and Tesla. Vibe Coding is the process of describing goals in natural language, letting advanced models handle implementation, and iterating quickly without worrying too much about the underlying code. In short - you describe, and large language models generate and refine. [^footnote]
 
 
 ## My Exploration of Vibe Coding
@@ -42,6 +42,31 @@ As I mentioned earlier that it does not matter whether you are a new developer o
 
 In this series of blogs, I intend to explore several available options and categorize them based on how and where they can be used effectively.
 
+## Easy Entry: Chat Based Builders
+Let us start with the most accessible option that is chat-based builders. If you are new to all this, the easiest way to get started is using conversational AI tools. All you need is a well-structured prompt. 
+These tools gained traction with popularity of [Anthropic’s Claude artefact](https://www.anthropic.com/product). It lets you build live dashboard, tools and interfaces directly in chat window. 
+
+Try prompting:
+
+> Create a dashboard for analysing social media posts performance using most relevant visualisation from D3.
+
+Claude will generate a live preview that you can tweak, inspect, and even publish. Below is a screenshot of what it generated for me.
+
+![Claude generated social media dashboard](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/claude-generated-ui.png)*Claude generated Social Media Analystics dashboard*
+
+Tools like ChatGPT, Google Gemini and Microsoft Copilot offer similar features. You can generate fully functional code with simple natural language prompts. 
+
+Try something fun like 
+> Build a simple recipe idea generator. I want to input a few ingredients I have, and it suggests a random recipe. I should be able to save recipes I like and add my own custom recipes
+
+You’ll get a working prototype that you can experiment with or customize further. Here’s another screenshot—this one is from ChatGPT.
+
+![ChatGPT generated Recipe Ideas UI](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/chatgpt-generated-ui.png)*ChatGPT generated Recipe Ideas UI*
+
+Even if you have no programming background, this is an excellent place to start. What’s more—you can download and share the code.
+
+## What Is Next
+In part 2, I will continue this discussion.
 
 
 ## References
