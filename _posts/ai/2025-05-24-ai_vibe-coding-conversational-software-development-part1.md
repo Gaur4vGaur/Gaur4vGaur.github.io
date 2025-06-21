@@ -66,7 +66,7 @@ You’ll get a working prototype that you can experiment with or customize furth
 Even if you have no programming background, this is an excellent place to start. What’s more—you can download and share the code.
 
 ## What Is Next
-In part 2, I will continue this discussion.
+In [part 2 of the series](https://www.gaurgaurav.com/2025/ai/vibe-coding-conversational-software-development-part2/){:target="_blank"}, I will continue this discussion and add some of my experiences of working with these tools.
 
 
 ## References
