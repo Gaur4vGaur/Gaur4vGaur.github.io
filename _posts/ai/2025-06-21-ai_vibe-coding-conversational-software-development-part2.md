@@ -53,11 +53,11 @@ This tool is especially convenient for generating a quick prototype. While it mi
 ## A Growing Ecosystem
 These are not the only available options in the market. The app store for AI-driven development is rapidly filling up, and each tool has its own feature set and niche.
 -	[**Lovable**](https://lovable.dev/){:target=_"blank"} is a great option for working with UIs and interfaces that you can tweak visually. It is another non-IDE alternative that lets you can interact with simple natural language text prompts. You can describe what you want, and it updates the interface accordingly. It also supports backend connections, integrations, and multi-user collaboration.
--	[**Bolt.new**](https://bolt.new/){:target="_blank"} is another available option for full stack apps and frameworks like [Next.js](https://nextjs.org/){target="_blank"} or [Svelte](https://svelte.dev/){target="_blank"}, and mobile via Expo. I think Bolt is outstanding if you are a beginner. The design outputs are sometimes a bit better than what I was expecting.
--	Another similar tool is [**V0 by Vercel**](https://v0.dev/){:target="_blank"}. It is more developer focussed online tool. It is built by the team behind [Next.js](https://nextjs.org/){target="_blank"} and it supports modern web technologies out of the box.
+-	[**Bolt.new**](https://bolt.new/){:target="_blank"} is another available option for full stack apps and frameworks like [Next.js](https://nextjs.org/){:target="_blank"} or [Svelte](https://svelte.dev/){:target="_blank"}, and mobile via Expo. I think Bolt is outstanding if you are a beginner. The design outputs are sometimes a bit better than what I was expecting.
+-	Another similar tool is [**V0 by Vercel**](https://v0.dev/){:target="_blank"}. It is more developer focussed online tool. It is built by the team behind [Next.js](https://nextjs.org/){:target="_blank"} and it supports modern web technologies out of the box.
 
 The tool to consider and adopt really depends on your problem statement. 
 
 
 ## Final Thoughts
-I think AI tools are enhancing our programming capabilities. If I have to pick one of those, I will pick that seamlessly blends into the background, providing just the right amount of assistance without being intrusive. Tools are only valuable if they help you build faster and improves overall experience. I will continue the discussion in third part of this series
+I think AI tools are enhancing our programming capabilities. If I have to pick one of those, I will pick that seamlessly blends into the background, providing just the right amount of assistance without being intrusive. Tools are only valuable if they help you build faster and improves overall experience. I will continue the discussion in part 3 of this series
