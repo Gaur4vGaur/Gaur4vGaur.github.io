@@ -1,5 +1,5 @@
 ---
-title: Vibe Coding - Conversational Software Development - Part 1
+title: Vibe Coding - Conversational Software Development - Part 1 Introduction
 description: Discover how AI is transforming software development in Part 1 of our 'Vibe Coding' series. Explore conversational coding, real-time code generation, and the future of developer productivity.
 tags: ["ai", "vibe coding"]
 category: ["ai"]
