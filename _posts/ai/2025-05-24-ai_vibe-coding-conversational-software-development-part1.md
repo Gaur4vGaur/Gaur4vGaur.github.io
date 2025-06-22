@@ -52,7 +52,7 @@ Try prompting:
 
 Claude will generate a live preview that you can tweak, inspect, and even publish. Below is a screenshot of what it generated for me.
 
-![Claude generated social media dashboard](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/claude-generated-ui.png)*Claude generated Social Media Analystics dashboard*
+![Claude generated social media dashboard](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/claude-generated-ui.png)*Claude generated Social Media Analytics dashboard*
 
 Tools like ChatGPT, Google Gemini and Microsoft Copilot offer similar features. You can generate fully functional code with simple natural language prompts. 
 
