@@ -59,7 +59,7 @@ Tools like ChatGPT, Google Gemini and Microsoft Copilot offer similar features. 
 Try something fun like 
 > Build a simple recipe idea generator. I want to input a few ingredients I have, and it suggests a random recipe. I should be able to save recipes I like and add my own custom recipes
 
-You’ll get a working prototype that you can experiment with or customize further. Here’s another screenshot—this one is from ChatGPT.
+You will get a working prototype that you can experiment with or customize further. Here’s another screenshot—this one is from ChatGPT.
 
 ![ChatGPT generated Recipe Ideas UI](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/chatgpt-generated-ui.png)*ChatGPT generated Recipe Ideas UI*
 
