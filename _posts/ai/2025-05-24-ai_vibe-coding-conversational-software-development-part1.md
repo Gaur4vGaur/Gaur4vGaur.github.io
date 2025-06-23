@@ -12,18 +12,18 @@ image:
 ---
 
 ## Introduction
-Since I started coding, I have seen developer communities strive to make programming more human-readable—almost like writing in English. Many modern languages introduced [syntactic sugar](https://en.wiktionary.org/wiki/syntactic_sugar){:target="_blank"} to make code more intuitive and conversational. But now, we are witnessing something far more transformative.
+Since I started coding, I have seen developer communities strive to make programming more human-readable—almost like writing in English or a preferred language. Many modern languages introduced [syntactic sugar](https://en.wiktionary.org/wiki/syntactic_sugar){:target="_blank"} to make code more intuitive and conversational. These efforts have made significant advancements, but now, we are witnessing something far more transformative.
 
-Natural language can now be translated directly into functional software. The concept is widely referred as __Vibe Coding__. It is an _AI first approach_ for rapid software development. I have put down a step-by-step diagram showing end-to-end experience with chat-based AI development based on my understanding.
+Natural language can now be translated directly into functional software. The concept is widely referred as __Vibe Coding__. It is an _AI first approach_ for rapid software development. Let me try to explain the idea with the help of a step-by-step diagram that I have added below. As the picture shows, you put down your thoughts or overall idea as a prompt. You direct what step you want to achieve or what is your end goal. The chat-based AI works on your prompt and comes up with a generated code. You preview the output of the code and can fine-tune it further. Once you are happy, you put that code into your server.
 
 ![End-to-end experience with chat-based AI development](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/end-to-end-experience-chat-based-builders.png
 )*End-to-end experience with chat-based AI development*
 
-The term Vibe Coding was popularized in early 2025 by researcher [Andrej Karpathy](https://en.wikipedia.org/wiki/Andrej_Karpathy){:target="_blank"}, known for his work in Open API and Tesla. Vibe Coding is the process of describing goals in natural language, letting advanced models handle implementation, and iterating quickly without worrying too much about the underlying code. In short - you describe, and large language models generate and refine. [^footnote]
+The term Vibe Coding was popularized in early 2025 by researcher [Andrej Karpathy](https://en.wikipedia.org/wiki/Andrej_Karpathy){:target="_blank"}, known for his work in Open API and Tesla. He defines Vibe Coding as a process of describing goals in natural language, letting advanced models handle implementation, and iterating quickly without worrying too much about the underlying code. In short - you describe, and large language models generate and refine. [^footnote]
 
 
 ## My Exploration of Vibe Coding
-I recently started looking into this new concept. While the definition makes it look straightforward, its applications vary depending on what you want to achieve. So far, I’ve seen it manifesting in several forms based on what you want to get out of it. You can perform things like:
+I recently started to explore this new notion of coding. While the definition makes it look straightforward, its applications vary depending on what you want to achieve and the tools you use. So far, I have seen it manifesting in several forms based on what you want to get out of it. You can perform things like:
 
 - **Rapid Prototyping** – This is my favourite use case. It can be used for a quick UI mock-up or lightweight programs to validate a hypothesis.
 - **Automating Repetitive Tasks** – Developers constantly look for ways to reduce [toil](https://sre.google/sre-book/eliminating-toil/){:target="_blank"}.
@@ -59,11 +59,11 @@ Tools like ChatGPT, Google Gemini and Microsoft Copilot offer similar features. 
 Try something fun like 
 > Build a simple recipe idea generator. I want to input a few ingredients I have, and it suggests a random recipe. I should be able to save recipes I like and add my own custom recipes
 
-You will get a working prototype that you can experiment with or customize further. Here’s another screenshot—this one is from ChatGPT.
+You will get a working prototype that you can experiment with or customize further. Here is another screenshot—this one is from ChatGPT.
 
 ![ChatGPT generated Recipe Ideas UI](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-05-24-ai_vibe-coding-conversational-software-development-part1/chatgpt-generated-ui.png)*ChatGPT generated Recipe Ideas UI*
 
-Even if you have no programming background, this is an excellent place to start. What’s more—you can download and share the code.
+You can download this auto generated code and share it wider. You can execute the same prompt on Google Gemini and Microsoft Copilot to compare the results, and may share in the comments.
 
 ## What Is Next
 In [part 2 of the series](https://www.gaurgaurav.com/2025/ai/vibe-coding-conversational-software-development-part2/){:target="_blank"}, I will continue this discussion and add some of my experiences of working with these tools.
