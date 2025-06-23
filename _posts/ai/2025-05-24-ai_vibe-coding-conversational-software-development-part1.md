@@ -1,6 +1,6 @@
 ---
 title: Vibe Coding - Conversational Software Development - Part 1 Introduction
-description: Discover how AI is transforming software development in Part 1 of our 'Vibe Coding' series. Explore conversational coding, real-time code generation, and the future of developer productivity.
+description: Discover how AI is transforming software development in Part 1 of my 'Vibe Coding' series. Explore conversational coding, real-time code generation, and the future of developer productivity.
 tags: ["ai", "vibe coding"]
 category: ["ai"]
 date: 2025-05-24
@@ -12,7 +12,7 @@ image:
 ---
 
 ## Inroduction
-Since I started coding, I’ve seen developer communities strive to make programming more human-readable—almost like writing in English. Many modern languages introduced [syntactic sugar](https://en.wiktionary.org/wiki/syntactic_sugar){:target="_blank"} to make code more intuitive and conversational. But now, we are witnessing something far more transformative.
+Since I started coding, I have seen developer communities strive to make programming more human-readable—almost like writing in English. Many modern languages introduced [syntactic sugar](https://en.wiktionary.org/wiki/syntactic_sugar){:target="_blank"} to make code more intuitive and conversational. But now, we are witnessing something far more transformative.
 
 Natural language can now be translated directly into functional software. The concept is widely referred as __Vibe Coding__. It is an _AI first approach_ for rapid software development. I have put down a step-by-step diagram showing end-to-end experience with chat-based AI development based on my understanding.
 
