@@ -11,7 +11,7 @@ image:
   height: 500
 ---
 
-## Inroduction
+## Introduction
 Since I started coding, I have seen developer communities strive to make programming more human-readable—almost like writing in English. Many modern languages introduced [syntactic sugar](https://en.wiktionary.org/wiki/syntactic_sugar){:target="_blank"} to make code more intuitive and conversational. But now, we are witnessing something far more transformative.
 
 Natural language can now be translated directly into functional software. The concept is widely referred as __Vibe Coding__. It is an _AI first approach_ for rapid software development. I have put down a step-by-step diagram showing end-to-end experience with chat-based AI development based on my understanding.
