@@ -38,7 +38,7 @@ I now make it a habit to start every coding session by explicitly setting the sy
 I am still learning as I go, but I want to share a sample prompt that has worked well for me. The idea is to set clear constraints right from the start. It gives the AI less room for misinterpretation and reduces friction during the session.
 Here is a sample system prompt I often use:
 
-```md
+```cmd
 Consider yourself a frontend developer.
 All UI components should use React and Tailwind CSS.
 Use JavaScript only and avoid any external libraries unless specified.
@@ -63,7 +63,7 @@ Another observation is that AI assistants demonstrate higher effectiveness when 
 If you have been following along, the discussion so far might make it feel like you need to master a dozen concepts before you even begin with Vibe Coding. But that is not true.
 If you are just getting started, my advice is to set a few clear boundaries and get going. Let us take an example to create an interactive dashboard. Here is an example of a prompt that works well to start with:
 
-```md
+```cmd
 I am a new developer. I want to build an interactive data dashboard.
 Can you suggest a tech stack that is easy to maintain and well-supported?
 ```
@@ -72,8 +72,81 @@ Most AI assistants like ChatGPT, Claude, and Gemini will then help you through y
 ## Tools That Help You Craft Better Prompts
 As I continue experimenting, I have come to realize how important the right prompt is. And the good news? You don't have to guess. Tools like:
 
-- [Anthropic Claude Console] (https://console.anthropic.com/){:target="_blank"}
-- [Google Gemini] (https://gemini.google.com/app){:target="_blank"}
+- [Anthropic Claude Console](https://console.anthropic.com/){:target="_blank"}
+- [Google Gemini](https://gemini.google.com/app){:target="_blank"}
 - [ChatGPT](https://chatgpt.com/){:target="_blank"}
 
 can help you test, iterate, and refine your prompts in real time. Below is an example of how I refined one of mine using Google Gemini.
+
+## My Prompt Refinement Process
+I started with this base prompt to explore [London Air Quality Data](https://data.london.gov.uk/download/290a22f1-5eef-4801-8286-3f288b49093a/acce7f88-70f0-4fd0-9160-f02a9d96b2c3/air-quality-london.xlsx){:target="_blank"}.
+
+```cmd
+I want to build an interactive dashboard for exploring data located at
+London Air Quality Data (Excel).
+
+Please ask me questions to better understand the requirements and then help me write a system prompt that guides you to use React, Tailwind, and D3 for visualization.
+```
+
+Gemini asked a few smart follow-up questions about:
+- what kind of visualizations I had in mind,
+- the type of interactivity I expected,
+- the layout preferences, and
+- how I planned to handle the data source.
+
+To narrow the scope, I directed the focus to only one sheet:
+
+`Only evaluate the ‘Monthly Averages’ sheet. Assume everything else`
+
+Based on that, Gemini helped me generate a refined system prompt that I could use to generate my dashboard. Below is the output prompt
+
+```md
+### System Prompt:
+
+You are an expert web development assistant tasked with building an interactive data exploration dashboard. Your goal is to generate a detailed plan, including component structure and initial code snippets, for a React application that visualizes air quality monthly averages.
+
+__Project Objective__: Create an interactive dashboard to explore monthly average air quality data for London, sourced from a specific Excel file.
+
+### Core Technologies:
+- Frontend Framework: React
+- Styling Framework: Tailwind CSS
+- Visualization Library: D3.js
+
+### Data Source:
+- __URL__: https://data.london.gov.uk/download/290a22f1-5eef-4801-8286-3f288b49093a/acce7f88-70f0-4fd0-9160-f02a9d96b2c3/air-quality-london.xlsx
+- Specific Sheet to Use: "monthly averages"
+
+### Data Interpretation & Preparation:
+1.	Download and parse the Excel file from the provided URL.
+2.	Focus exclusively on the data within the "monthly averages" sheet.
+3.	Identify key columns for visualization:
+    - Date (or equivalent column representing the month/year for aggregation)
+    - Site Name (or equivalent for location/monitoring station)
+    - Pollutant (or equivalent for the type of pollutant, e.g., NO2, PM2.5)
+    - Value (or equivalent for the monthly average concentration)
+4.	Data cleaning and transformation should include:
+o	Converting date strings/numbers to valid Date objects.
+o	Handling potential missing or invalid data points gracefully (e.g., excluding them from calculations or using interpolation if appropriate for visualization context, but primarily focusing on showing available data).
+Dashboard Functionality & Interactivity:
+1.	Data Loading: Efficiently load and parse the "monthly averages" data from the Excel file upon component mount. Use an appropriate library like xlsx (SheetJS) for Excel parsing.
+2.	Filters/Controls:
+o	Pollutant Type Filter: Allow users to select one or more pollutant types (e.g., a multi-select dropdown or checkboxes).
+o	Monitoring Station Filter: Allow users to select one or more specific monitoring stations/sites.
+o	Year Filter: Provide a way to filter data by year (e.g., a dropdown for available years or a range slider if multiple years are selected).
+3.	Visualizations (D3.js):
+o	Time Series Line Chart: The primary visualization should be a line chart showing the monthly average trend over time for selected pollutants and stations.
+	Each line should represent a combination of pollutant and station (or allow choosing a single pollutant to compare multiple stations, or vice versa).
+	Axes should be clearly labeled (e.g., "Date" on X-axis, "Concentration" on Y-axis).
+o	Interactive Tooltips: On hover, display detailed information for specific data points (e.g., date, pollutant, station, exact monthly average value).
+4.	User Interface (React & Tailwind CSS):
+o	Clean, responsive, and intuitive dashboard layout.
+o	Filter controls should be easily accessible (e.g., in a sidebar or header).
+o	The main visualization area should be prominent.
+o	Use Tailwind CSS for all styling, ensuring a modern and clean aesthetic.
+Output Requirements:
+1.	A high-level React component structure (e.g., App.js, Dashboard.js, Chart.js, FilterControls.js).
+2.	Pseudo-code or a conceptual outline for data fetching and initial parsing of the Excel sheet.
+3.	An example of how a D3 line chart component might receive data and render, focusing on the integration with React and general D3 patterns.
+4.	Considerations for managing application state (e.g., selected filters, loaded data).
+
+```
