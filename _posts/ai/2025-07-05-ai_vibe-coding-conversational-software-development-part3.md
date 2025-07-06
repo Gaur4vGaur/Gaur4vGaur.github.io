@@ -6,7 +6,7 @@ category: ["ai"]
 date: 2025-07-05
 permalink: '2025/ai/vibe-coding-conversational-software-development-part3/'
 image:
-  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-06-21-ai_vibe-coding-conversational-software-development-part2/cover-image-compressed.png
+  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-07-05-ai_vibe-coding-conversational-software-development-part3/coverImage.png
   width: 800
   height: 500
 ---
@@ -17,8 +17,10 @@ It is speculated that vibe coding could fundamentally change how we build softwa
 In my [last post](https://www.gaurgaurav.com/2025/ai/vibe-coding-conversational-software-development-part2/){:target="_blank"}, I experimented with a few Vibe Coding tools and shared my hands-on experience. If you have been following closely, you might have noticed something subtle but important that I am using natural language as an interface. The words I choose shape how AI interprets and builds software. And behind that process lies a critical yet often overlooked layer of the system prompt.
 
 ## So, What Exactly is a Prompt?
-Think of Vibe Coding as a _chat-driven_ engineering environment. Every message you send, or the prompt is not just casual conversation. It is more like writing an operating manual for your AI assistant.
+Think of Vibe Coding as a *chat-driven* engineering environment. Every message you send, or the prompt is not just casual conversation. It is more like writing an operating manual for your AI assistant.
 A prompt sets the ground rules. It can define your preferred tech stack, coding style, naming conventions, or whether the AI should ask for clarification before making assumptions. In other words, it’s your interface for aligning the AI with your intent.
+
+![System prompt illustration](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-07-05-ai_vibe-coding-conversational-software-development-part3/SystemPrompt.png)*System prompt*
 
 ## Why Prompts Matter
 From my experience, if the prompt is not clear or consistent, things can quickly go off track. Here are just a few issues I ran into when prompts were vague:
@@ -84,7 +86,6 @@ I started with this base prompt to explore [London Air Quality Data](https://dat
 ```cmd
 I want to build an interactive dashboard for exploring data located at
 London Air Quality Data (Excel).
-
 Please ask me questions to better understand the requirements and then help me write a system prompt that guides you to use React, Tailwind, and D3 for visualization.
 ```
 
@@ -103,9 +104,11 @@ Based on that, Gemini helped me generate a refined system prompt that I could us
 ```md
 ### System Prompt:
 
-You are an expert web development assistant tasked with building an interactive data exploration dashboard. Your goal is to generate a detailed plan, including component structure and initial code snippets, for a React application that visualizes air quality monthly averages.
+You are an expert web development assistant tasked with building an interactive data exploration dashboard. 
+Your goal is to generate a detailed plan, including component structure and initial code snippets, for a React application that visualizes air quality monthly averages.
 
-__Project Objective__: Create an interactive dashboard to explore monthly average air quality data for London, sourced from a specific Excel file.
+__Project Objective__
+Create an interactive dashboard to explore monthly average air quality data for London, sourced from a specific Excel file.
 
 ### Core Technologies:
 - Frontend Framework: React
@@ -117,36 +120,48 @@ __Project Objective__: Create an interactive dashboard to explore monthly averag
 - Specific Sheet to Use: "monthly averages"
 
 ### Data Interpretation & Preparation:
-1.	Download and parse the Excel file from the provided URL.
-2.	Focus exclusively on the data within the "monthly averages" sheet.
-3.	Identify key columns for visualization:
-    - Date (or equivalent column representing the month/year for aggregation)
-    - Site Name (or equivalent for location/monitoring station)
-    - Pollutant (or equivalent for the type of pollutant, e.g., NO2, PM2.5)
-    - Value (or equivalent for the monthly average concentration)
-4.	Data cleaning and transformation should include:
-o	Converting date strings/numbers to valid Date objects.
-o	Handling potential missing or invalid data points gracefully (e.g., excluding them from calculations or using interpolation if appropriate for visualization context, but primarily focusing on showing available data).
-Dashboard Functionality & Interactivity:
-1.	Data Loading: Efficiently load and parse the "monthly averages" data from the Excel file upon component mount. Use an appropriate library like xlsx (SheetJS) for Excel parsing.
-2.	Filters/Controls:
-o	Pollutant Type Filter: Allow users to select one or more pollutant types (e.g., a multi-select dropdown or checkboxes).
-o	Monitoring Station Filter: Allow users to select one or more specific monitoring stations/sites.
-o	Year Filter: Provide a way to filter data by year (e.g., a dropdown for available years or a range slider if multiple years are selected).
-3.	Visualizations (D3.js):
-o	Time Series Line Chart: The primary visualization should be a line chart showing the monthly average trend over time for selected pollutants and stations.
-	Each line should represent a combination of pollutant and station (or allow choosing a single pollutant to compare multiple stations, or vice versa).
-	Axes should be clearly labeled (e.g., "Date" on X-axis, "Concentration" on Y-axis).
-o	Interactive Tooltips: On hover, display detailed information for specific data points (e.g., date, pollutant, station, exact monthly average value).
-4.	User Interface (React & Tailwind CSS):
-o	Clean, responsive, and intuitive dashboard layout.
-o	Filter controls should be easily accessible (e.g., in a sidebar or header).
-o	The main visualization area should be prominent.
-o	Use Tailwind CSS for all styling, ensuring a modern and clean aesthetic.
-Output Requirements:
-1.	A high-level React component structure (e.g., App.js, Dashboard.js, Chart.js, FilterControls.js).
-2.	Pseudo-code or a conceptual outline for data fetching and initial parsing of the Excel sheet.
-3.	An example of how a D3 line chart component might receive data and render, focusing on the integration with React and general D3 patterns.
-4.	Considerations for managing application state (e.g., selected filters, loaded data).
+1. Download and parse the Excel file from the provided URL.
+2. Focus exclusively on the data within the "monthly averages" sheet.
+3. Identify key columns for visualization:
+  - Date (or equivalent column representing the month/year for aggregation)
+  - Site Name (or equivalent for location/monitoring station)
+  - Pollutant (or equivalent for the type of pollutant, e.g., NO2, PM2.5)
+  - Value (or equivalent for the monthly average concentration)
+4. Data cleaning and transformation should include:
+  - Converting date strings/numbers to valid Date objects.
+  - Handling potential missing or invalid data points gracefully (e.g., excluding them from calculations or using interpolation if appropriate for visualization context, but primarily focusing on showing available data).
+
+### Dashboard Functionality & Interactivity:
+1. Data Loading: Efficiently load and parse the "monthly averages" data from the Excel file upon component mount. Use an appropriate library like xlsx (SheetJS) for Excel parsing.
+2. Filters/Controls:
+  - Pollutant Type Filter: Allow users to select one or more pollutant types (e.g., a multi-select dropdown or checkboxes).
+  - Monitoring Station Filter: Allow users to select one or more specific monitoring stations/sites.
+  - Year Filter: Provide a way to filter data by year (e.g., a dropdown for available years or a range slider if multiple years are selected).
+3. Visualizations (D3.js):
+  - Time Series Line Chart: The primary visualization should be a line chart showing the monthly average trend over time for selected pollutants and stations.
+    -Each line should represent a combination of pollutant and station (or allow choosing a single pollutant to compare multiple stations, or vice versa).
+    - Axes should be clearly labeled (e.g., "Date" on X-axis, "Concentration" on Y-axis).
+  - Interactive Tooltips: On hover, display detailed information for specific data points (e.g., date, pollutant, station, exact monthly average value).
+4. User Interface (React & Tailwind CSS):
+  - Clean, responsive, and intuitive dashboard layout.
+  - Filter controls should be easily accessible (e.g., in a sidebar or header).
+  - The main visualization area should be prominent.
+  - Use Tailwind CSS for all styling, ensuring a modern and clean aesthetic.
+
+### Output Requirements:
+1. A high-level React component structure (e.g., App.js, Dashboard.js, Chart.js, FilterControls.js).
+2. Pseudo-code or a conceptual outline for data fetching and initial parsing of the Excel sheet.
+3. An example of how a D3 line chart component might receive data and render, focusing on the integration with React and general D3 patterns.
+4. Considerations for managing application state (e.g., selected filters, loaded data).
 
 ```
+
+## Final Thoughts
+System prompts require continuous refinement as they need to match the evolving needs of your project just like we rewrite code to enhance its clarity and maintainability. Your prompts should evolve to match your project's development to reflect:
+- new tools or stack changes,
+- updated coding patterns or style guides,
+- and shifts in architecture or design decisions.
+
+A good prompt is more than basic instructions to your assistant. You can consider it as a design contract between you and your AI assistant. In my next post I will continue to discuss how to further fine tune the prompts.
+
+My suggestion for now is not to stress too much about getting it perfect the first time. Start simple, iterate, and treat your prompt like part of the engineering process where your intent meets implementation.
