@@ -1,6 +1,6 @@
 ---
 title: Vibe Coding - Build Better with AI - Part 3 Prompt Discipline
-description: Discover how AI is transforming software development in Part 3 of my 'Vibe Coding' series. Explore conversational coding, real-time code generation in practice, and the future of developer productivity.
+description: Discover how AI is transforming software development in Part 3 of my 'Vibe Coding' series. Explore conversational coding, code generation from prompt, and the future of developer productivity.
 tags: ["ai", "vibe coding"]
 category: ["ai"]
 date: 2025-07-05
@@ -84,9 +84,9 @@ can help you test, iterate, and refine your prompts in real time. Below is an ex
 I started with this base prompt to explore [London Air Quality Data](https://data.london.gov.uk/download/290a22f1-5eef-4801-8286-3f288b49093a/acce7f88-70f0-4fd0-9160-f02a9d96b2c3/air-quality-london.xlsx){:target="_blank"}.
 
 ```cmd
-I want to build an interactive dashboard for exploring data located at
-London Air Quality Data (Excel).
-Please ask me questions to better understand the requirements and then help me write a system prompt that guides you to use React, Tailwind, and D3 for visualization.
+I want to build an interactive dashboard for exploring data located at London Air Quality Data (Excel).
+Please ask me questions to better understand the requirements.
+Also then help me write a system prompt that guides you to use React, Tailwind, and D3 for visualization.
 ```
 
 Gemini asked a few smart follow-up questions about:

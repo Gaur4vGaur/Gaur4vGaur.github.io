@@ -60,4 +60,4 @@ The tool to consider and adopt really depends on your problem statement.
 
 
 ## Final Thoughts
-I think AI tools are enhancing our programming capabilities. If I have to pick one of those, I will pick that seamlessly blends into the background, providing just the right amount of assistance without being intrusive. Tools are only valuable if they help you build faster and improves overall experience. I will continue the discussion in part 3 of this series
+I think AI tools are enhancing our programming capabilities. If I have to pick one of those, I will pick that seamlessly blends into the background, providing just the right amount of assistance without being intrusive. Tools are only valuable if they help you build faster and improves overall experience. I will continue the discussion and explore [System Prompts in part 3](https://www.gaurgaurav.com/2025/ai/vibe-coding-conversational-software-development-part3/){:target="_blank"} of this series.
