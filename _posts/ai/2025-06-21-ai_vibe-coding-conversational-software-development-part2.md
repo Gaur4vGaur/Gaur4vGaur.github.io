@@ -36,7 +36,7 @@ There are developers who love working in the terminal. I would suggest tools lik
 
 I recently tried out Claude Code for a side project. From the CLI, I was able to set up a basic project, refactor functions, and even tidy up some old scripts. It is not a traditional simple text-based interface, and I recommend it as a must have in your toolkit.
 
-Anthropic has done a good job with [Claude Code documenration and working examples](https://docs.anthropic.com/en/docs/claude-code/quickstart){:target="_blank"}. It is worth checking out if you are curious.
+Anthropic has done a good job with [Claude Code documentation and working examples](https://docs.anthropic.com/en/docs/claude-code/quickstart){:target="_blank"}. It is worth checking out if you are curious.
 
 ## AI in the Browser: Replit
 The other tool I tried was [Replit](https://replit.com/){:target="_blank"}. It has latest AI features in browser and target developers above beginner level. I provided it below prompt to generate me a Trello like dashboard to manage agile teams.
@@ -48,7 +48,7 @@ What really impressed me was how collaborative the experience is—you provide a
 
 This tool is especially convenient for generating a quick prototype. While it might not be the best fit for highly complex systems, it shines when you need to get something up and running in a browser environment. Below is a sample application that it generated for my above prompt. It has done a decent job and has added features like tags for tickets, included date on every ticket and even presenting in-progress bar per ticket.
 
-![Replit priview example](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-06-21-ai_vibe-coding-conversational-software-development-part2/Replit-preview.png)*Replit priview example*
+![Replit preview example](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-06-21-ai_vibe-coding-conversational-software-development-part2/Replit-preview.png)*Replit preview example*
 
 ## A Growing Ecosystem
 These are not the only available options in the market. The app store for AI-driven development is rapidly filling up, and each tool has its own feature set and niche.
