@@ -143,9 +143,7 @@ header {
 
   .post-tag {
     &:hover {
-      @extend %link-hover;
       @extend %tag-hover;
-      @extend %no-bottom-border;
     }
   }
 }
@@ -272,12 +270,8 @@ header {
     padding-left: 0;
 
     li {
-      &:not(:last-child) {
-        margin: 0.4rem 0;
-      }
-
       a {
-        padding: 0.2rem 0 0.2rem 1.25rem;
+        padding: 0.4rem 0 0.4rem 1.25rem;
       }
     }
 
