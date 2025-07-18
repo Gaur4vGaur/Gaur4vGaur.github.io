@@ -1,5 +1,5 @@
 ---
-title: Vibe Coding - Build Better with AI - Part 3 Prompt Discipline
+title: Vibe Coding - Conversational Software Development - Part 3 Prompt Discipline
 description: Discover how AI is transforming software development in Part 3 of my 'Vibe Coding' series. Explore conversational coding, code generation from prompt, and the future of developer productivity.
 tags: ["ai", "vibe coding"]
 category: ["ai"]
@@ -89,6 +89,9 @@ Please ask me questions to better understand the requirements.
 Also then help me write a system prompt that guides you to use React, Tailwind, and D3 for visualization.
 ```
 
+> If London Air Quality Data is not available at above link, I have [committed a copy](https://github.com/Gaur4vGaur/traveller/blob/master/air-quality-london.csv){:target="_blank"} of it, as CSV, at the time writing this post.
+{: .prompt-info }
+
 Gemini asked a few smart follow-up questions about:
 - what kind of visualizations I had in mind,
 - the type of interactivity I expected,
@@ -162,6 +165,6 @@ System prompts require continuous refinement as they need to match the evolving 
 - updated coding patterns or style guides,
 - and shifts in architecture or design decisions.
 
-A good prompt is more than basic instructions to your assistant. You can consider it as a design contract between you and your AI assistant. In my next post I will continue to discuss how to further fine tune the prompts.
+A good prompt is more than basic instructions to your assistant. You can consider it as a design contract between you and your AI assistant. In [my next and final post](https://www.gaurgaurav.com/2025/ai/vibe-coding-conversational-software-development-part4/){:target="_blank"} I will continue to discuss how to further fine tune the prompts.
 
 My suggestion for now is not to stress too much about getting it perfect the first time. Start simple, iterate, and treat your prompt like part of the engineering process where your intent meets implementation.
