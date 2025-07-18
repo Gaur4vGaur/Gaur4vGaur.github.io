@@ -40,13 +40,14 @@ I now make it a habit to start every coding session by explicitly setting the sy
 I am still learning as I go, but I want to share a sample prompt that has worked well for me. The idea is to set clear constraints right from the start. It gives the AI less room for misinterpretation and reduces friction during the session.
 Here is a sample system prompt I often use:
 
-```cmd
-Consider yourself a frontend developer.
-All UI components should use React and Tailwind CSS.
-Use JavaScript only and avoid any external libraries unless specified.
-Ask for clarification if any requirement is unclear.
+
+>Consider yourself a frontend developer.<br>
+All UI components should use React and Tailwind CSS.<br>
+Use JavaScript only and avoid any external libraries unless specified.<br>
+Ask for clarification if any requirement is unclear.<br>
 Focus on clean and modular code.
-```
+
+
 This prompt does a few important things:
 - It defines the role of the assistant (a frontend developer).
 - It sets technology boundaries—no Python, TypeScript, or surprise libraries.
@@ -65,10 +66,10 @@ Another observation is that AI assistants demonstrate higher effectiveness when 
 If you have been following along, the discussion so far might make it feel like you need to master a dozen concepts before you even begin with Vibe Coding. But that is not true.
 If you are just getting started, my advice is to set a few clear boundaries and get going. Let us take an example to create an interactive dashboard. Here is an example of a prompt that works well to start with:
 
-```cmd
-I am a new developer. I want to build an interactive data dashboard.
+
+> I am a new developer. I want to build an interactive data dashboard.
 Can you suggest a tech stack that is easy to maintain and well-supported?
-```
+
 Most AI assistants like ChatGPT, Claude, and Gemini will then help you through your upcoming steps. The assistants will pose clarifying questions about your requirements which allows them to develop both your tech stack and system prompt.
 
 ## Tools That Help You Craft Better Prompts
@@ -83,13 +84,13 @@ can help you test, iterate, and refine your prompts in real time. Below is an ex
 ## My Prompt Refinement Process
 I started with this base prompt to explore [London Air Quality Data](https://data.london.gov.uk/download/290a22f1-5eef-4801-8286-3f288b49093a/acce7f88-70f0-4fd0-9160-f02a9d96b2c3/air-quality-london.xlsx){:target="_blank"}.
 
-```cmd
-I want to build an interactive dashboard for exploring data located at London Air Quality Data (Excel).
-Please ask me questions to better understand the requirements.
-Also then help me write a system prompt that guides you to use React, Tailwind, and D3 for visualization.
-```
 
-> If London Air Quality Data is not available at above link, I have [committed a copy](https://github.com/Gaur4vGaur/traveller/blob/master/air-quality-london.csv){:target="_blank"} of it, as CSV, at the time writing this post.
+>I want to build an interactive dashboard for exploring data located at London Air Quality Data (Excel).<br>
+Please ask me questions to better understand the requirements.<br>
+Also then help me write a system prompt that guides you to use React, Tailwind, and D3 for visualization.
+
+
+> If London Air Quality Data is not available at above link, I have [committed a copy](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/air-quality-london.csv){:target="_blank"} of it, as CSV, at the time writing this post.
 {: .prompt-info }
 
 Gemini asked a few smart follow-up questions about:
@@ -100,7 +101,7 @@ Gemini asked a few smart follow-up questions about:
 
 To narrow the scope, I directed the focus to only one sheet:
 
-`Only evaluate the ‘Monthly Averages’ sheet. Assume everything else`
+>Only evaluate the ‘Monthly Averages’ sheet. Assume everything else
 
 Based on that, Gemini helped me generate a refined system prompt that I could use to generate my dashboard. Below is the output prompt
 
