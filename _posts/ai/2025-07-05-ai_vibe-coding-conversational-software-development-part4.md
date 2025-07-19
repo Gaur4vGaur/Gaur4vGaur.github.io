@@ -34,13 +34,13 @@ Here I am just focussed on the dashboard screen. Using such prompt will direct A
 
 
 ## One Task at a Time: Iterating with Focus
-Let us go deeper, take the example from my previous blog around `London weather data sheet`. Once the initial dashboard created, I will narrow the focus. 
+Let us go deeper, take the example from my previous blog around `London Air Quality Data`. Once the initial dashboard created, I will narrow the focus. 
 
-> Consider this London weather data sheet and analyse the dataset. Suggest data visualization or graph that captures key trends on the dashboard.
+> Consider this London Air Quality Data and analyse the dataset. Suggest data visualization or graph that captures key trends on the dashboard.
 
 Now the AI is not just coding, it is thinking. Below are a few suggestions it came up with.
 
-![AI visualisation suggestions](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-07-18-ai_vibe-coding-conversational-software-development-part4/VibeCoding3_AIsuggestions.png)*London Weather Data Insights*
+![AI visualisation suggestions](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/ai/2025-07-18-ai_vibe-coding-conversational-software-development-part4/VibeCoding3_AIsuggestions.png)*London Air Quality Data Insights*
 
 It might surface insights you hadn’t noticed or suggest charts that suit the story your data is telling. This is where AI becomes a true collaborator, not just a code generator.
 
