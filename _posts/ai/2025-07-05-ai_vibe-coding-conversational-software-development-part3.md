@@ -11,7 +11,7 @@ image:
   height: 500
 ---
 
-## Inroduction
+## Introduction
 It is speculated that vibe coding could fundamentally change how we build software. Instead of writing lines of code, we will describe our goals in plain English and working software will be generated in response.
 
 In my [last post](https://www.gaurgaurav.com/2025/ai/vibe-coding-conversational-software-development-part2/){:target="_blank"}, I experimented with a few Vibe Coding tools and shared my hands-on experience. If you have been following closely, you might have noticed something subtle but important that I am using natural language as an interface. The words I choose shape how AI interprets and builds software. And behind that process lies a critical yet often overlooked layer of the system prompt.
