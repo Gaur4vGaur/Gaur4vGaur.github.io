@@ -11,7 +11,7 @@ image:
   height: 500
 ---
 
-## Inroduction
+## Introduction
 
 Welcome to the fourth and final post in my __Vibe Code__ series. In the [previous article](https://www.gaurgaurav.com/2025/ai/vibe-coding-conversational-software-development-part3/){:target="_blank"}, I explained how *system prompts* can steer AI behaviour by setting initial expectations and boundaries. But if you have worked on even any mildly complex application, you will know that the first draft is never the final version. You always have some sort of UX tweaks, performance enhancements, or new feature requirements.
 
