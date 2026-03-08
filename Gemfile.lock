@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-chirpy (7.3.0)
+    jekyll-theme-chirpy (7.4.1)
       jekyll (~> 4.3)
       jekyll-archives (~> 2.2)
       jekyll-include-cache (~> 0.2)
@@ -43,9 +43,6 @@ GEM
     fiber-storage (1.0.0)
     forwardable-extended (2.6.0)
     google-protobuf (4.31.1-x64-mingw-ucrt)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.31.1-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
     hashery (2.1.2)
