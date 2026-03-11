@@ -73,3 +73,63 @@ I recommend every service must expose below four signals. I sometimes refer to t
 - Saturation
 
 They can help you diagnose most production incidents. Let us discuss them.
+
+
+## Latency – Earliest signal
+Latency is usually the earliest signal that something is going wrong. Long before error rates increase… Long before services fail… Latency begins to drift upward.
+
+Slow systems become broken systems eventually. If you only monitor errors, you will detect problems late. If you monitor latency, you can catch problems early.
+
+### Why Averages Are False Indicators
+
+Average latency is one of the most misleading metrics in production systems, however, many teams are still monitoring it. Consider a scenario where 990 requests complete in 40ms and 10 requests take 4 seconds. It means an average latency of about 80 ms. But a user experiencing the slow requests would strongly disagree.
+
+Observing percentiles can solve this problem. You should track all below:
+- p50 for a typical user experience
+- p95 for degraded experience, and
+- p99 for worst-case experience
+
+If p99 starts moving, it is the first clue during the incidents. Even if averages look perfect. Below is a code snippet to produce percentile metrics.
+
+```java
+@RestController
+public class OrderController {
+    private final Timer orderTimer;
+
+    public OrderController(MeterRegistry registry) {
+        this.orderTimer =
+            registry.timer("order.api.latency");
+    }
+
+    @GetMapping("/orders/{id}")
+    public Order getOrder(@PathVariable String id) {
+        return orderTimer.record(() -> {
+            return orderService.getOrder(id);
+        });
+    }
+}
+```
+
+### What Good Latency Dashboards Look Like
+A good latency dashboard should answer one question instantly
+
+> **Are users experiencing slow responses?**
+
+That means, you are looking for percentiles and not averages with clear trends. If you need five minutes to interpret a graph, the dashboard is not working.
+
+Diagram – image 2 // TODO
+
+## Traffic — System Load
+Traffic on your services tells you what the system is dealing with. Without traffic metrics, you cannot interpret latency or errors correctly. An error spike during a traffic spike means something very different from an error spike during normal load.
+
+Traffic metrics include requests per second or events per second or messages per second or also batch rates. Most incidents begin with a traffic change. Sometimes expected and sometimes not.
+
+A common pattern that I have always observed – Traffic increases and that increases latency. Integrations slow down and errors appear. Without traffic metrics, the root cause looks mysterious. With traffic metrics, it becomes obvious.
+
+**Prometheus Query Example**
+
+Requests per second:
+
+`rate(http_server_requests_seconds_count[1m])`
+
+This metric alone explains a surprising number of incidents.
