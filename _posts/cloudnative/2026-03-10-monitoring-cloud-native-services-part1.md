@@ -30,7 +30,9 @@ Something is always lagging somewhere, and all users are going to tell you is _"
 
 It might mean that either an API timing out or queue is backing up, or a container restarting or network path degraded.
 
-Diagram - Monitoring // TODO: Add diagram
+
+![A system thinking approach to monitoring](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2026-03-10-monitoring-cloud-native-services-part1/SystemThinkingApproach.png)*A system thinking approach to monitoring*
+
 
 After years of working on enterprise solutions, I can tell you that bugs do not cause major production incidents. They are often caused by lack of visibility, meaning missing the right metrics.
 
@@ -51,7 +53,7 @@ This is where observability comes in. Monitoring answers: _"Is something wrong?"
 ### What all you need?
 In practice, you need three things. **Metrics** are used to _detect problem_, **logs** to _explain errors_ and **traces** to _discover latency_. If your metrics are wrong, you would never know something is failing. And if you don't know something is failing, you never check logs and traces. Which is why metrics are the entry point of any investigation.
 
-Diagram - Observability // TODO
+![Observability triad](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2026-03-10-monitoring-cloud-native-services-part1/Observability.png)*Observability triad*
 
 
 ## Typical monitoring challenges
@@ -117,7 +119,7 @@ A good latency dashboard should answer one question instantly
 
 That means, you are looking for percentiles and not averages with clear trends. If you need five minutes to interpret a graph, the dashboard is not working.
 
-Diagram – image 2 // TODO
+![Percentiles over percentage on latency dashboard](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2026-03-10-monitoring-cloud-native-services-part1/latencyDashboard.png)*Percentiles over percentage on latency dashboard*
 
 ## Traffic — System Load
 Traffic on your services tells you what the system is dealing with. Without traffic metrics, you cannot interpret latency or errors correctly. An error spike during a traffic spike means something very different from an error spike during normal load.
@@ -133,3 +135,10 @@ Requests per second:
 `rate(http_server_requests_seconds_count[1m])`
 
 This metric alone explains a surprising number of incidents.
+
+## Production incident
+I once observed a latency spike that looked like a system failure. When I checked, CPU and memory looked normal, pods were healthy, error rates were low, and everything looked fine except traffic.
+
+Traffic had doubled within ten minutes because of a partner integration retry loop. Nothing was technically broken, but the system was overloaded. Without traffic metrics, I would have spent hours investigating. That is the difference good monitoring makes.
+
+I will continue this discussion in my next blog post.
