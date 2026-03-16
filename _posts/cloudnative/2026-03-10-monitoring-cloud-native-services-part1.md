@@ -82,7 +82,7 @@ Latency is usually the earliest signal that something is going wrong. Long befor
 
 Slow systems become broken systems eventually. If you only monitor errors, you will detect problems late. If you monitor latency, you can catch problems early.
 
-### Why Averages Are False Indicators
+### Why averages are false indicators?
 
 Average latency is one of the most misleading metrics in production systems, however, many teams are still monitoring it. Consider a scenario where 990 requests complete in 40ms and 10 requests take 4 seconds. It means an average latency of about 80 ms. But a user experiencing the slow requests would strongly disagree.
 
@@ -112,7 +112,7 @@ public class OrderController {
 }
 ```
 
-### What Good Latency Dashboards Look Like
+### What good latency dashboards look like?
 A good latency dashboard should answer one question instantly
 
 > **Are users experiencing slow responses?**
@@ -128,7 +128,7 @@ Traffic metrics include requests per second or events per second or messages per
 
 A common pattern that I have always observed – Traffic increases and that increases latency. Integrations slow down and errors appear. Without traffic metrics, the root cause looks mysterious. With traffic metrics, it becomes obvious.
 
-**Prometheus Query Example**
+**Prometheus query example**
 
 Requests per second:
 
