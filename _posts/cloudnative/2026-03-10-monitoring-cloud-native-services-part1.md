@@ -1,6 +1,6 @@
 ---
 title: Essential Monitoring Metrics for Cloud Native Systems - Part 1
-description: Master cloud-native observability. Learn the essential monitoring metrics, from Golden Signals to saturation, to keep your distributed systems reliable and fast.
+description: Master cloud-native observability. Learn the essential monitoring metrics, Golden Signals - latency and traffic, to keep your distributed systems reliable and fast.
 tags: ["cloud", "cloud native", "monitoring metrics", "observability"]
 category: ["cloud native"]
 date: 2026-03-10
