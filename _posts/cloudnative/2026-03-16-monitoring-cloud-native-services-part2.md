@@ -6,7 +6,7 @@ category: ["cloud native"]
 date: 2026-03-10
 permalink: '2026/cloud_native/essential-monitoring-metrics-part2/'
 image:
-  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2026-03-10-monitoring-cloud-native-services-part1/coverImage.png
+  path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2026-03-16-monitoring-cloud-native-services-part2/coverImage.png
   width: 800
   height: 500
 ---
