@@ -121,7 +121,7 @@ That means, you are looking for percentiles and not averages with clear trends. 
 
 ![Percentiles over percentage on latency dashboard](https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2026-03-10-monitoring-cloud-native-services-part1/latencyDashboard.png)*Percentiles over percentage on latency dashboard*
 
-## Traffic — System Load
+## Traffic — System load
 Traffic on your services tells you what the system is dealing with. Without traffic metrics, you cannot interpret latency or errors correctly. An error spike during a traffic spike means something very different from an error spike during normal load.
 
 Traffic metrics include requests per second or events per second or messages per second or also batch rates. Most incidents begin with a traffic change. Sometimes expected and sometimes not.
