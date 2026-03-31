@@ -46,11 +46,13 @@ It depends on traffic. If you process:
 
 Error rate is what matters. A simple production alert looks like this:
 
-$$
-\begin{equation}
-  \frac{\sum error~rate(status~5xx[5m])} {\sum http~request~rate(total -requests[5m])} > 0.02
-\end{equation}
-$$
+```yaml
+---
+math: true
+---
+```
+
+$$\frac{\sum error~rate(status~5xx[5m])} {\sum http~request~rate(total -requests[5m])} > 0.02$$
 
 It means alert when:
 
