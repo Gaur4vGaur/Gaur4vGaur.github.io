@@ -5,6 +5,7 @@ tags: ["cloud", "cloud native", "monitoring metrics", "observability"]
 category: ["cloud native"]
 date: 2026-03-10
 permalink: '2026/cloud_native/essential-monitoring-metrics-part2/'
+math: true
 image:
   path: https://raw.githubusercontent.com/Gaur4vGaur/traveller/refs/heads/master/images/cloudnative/2026-03-16-monitoring-cloud-native-services-part2/coverImage.png
   width: 800
@@ -46,13 +47,20 @@ It depends on traffic. If you process:
 
 Error rate is what matters. A simple production alert looks like this:
 
-```yaml
----
-math: true
----
-```
 
 $$\frac{\sum error~rate(status~5xx[5m])} {\sum http~request~rate(total -requests[5m])} > 0.02$$
+
+
+$$
+\frac{\sum error~rate(status~5xx[5m])}{\sum http~request~rate(total -requests[5m])} > 0.02
+$$
+
+$$
+\begin{equation}
+  LaTeX_math_expression
+  \label{eq:label_name}
+\end{equation}
+$$
 
 It means alert when:
 
