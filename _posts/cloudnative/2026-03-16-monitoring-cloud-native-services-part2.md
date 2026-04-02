@@ -1,5 +1,5 @@
 ---
-title: Essential Monitoring Metrics for Cloud Native Systems - Part 2
+title: The 4 Signals That Actually Predict Production Failures - Part 2
 description: Master cloud-native observability. Learn the essential monitoring metrics, Golden Signals - errors and saturation, to keep your distributed systems reliable and fast.
 tags: ["cloud", "cloud native", "monitoring metrics", "observability"]
 category: ["cloud native"]
