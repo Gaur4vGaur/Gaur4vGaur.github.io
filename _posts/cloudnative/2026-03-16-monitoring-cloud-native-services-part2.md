@@ -81,6 +81,9 @@ Most of the time, 4xx errors should not page engineers. But they should still be
 - Clients sending unexpected requests
 - Sometimes bots discovering your APIs
 
+
+![Http error decision tree](/assets/blog_assets/img/cloudnative/2026-03-16-monitoring-cloud-native-services-part2/httpDecisionTree.png){: w="400" h="400" }
+
 I once saw a system where 40% of traffic suddenly became `401` responses. Nothing was broken in my service. A client service had deployed a change with an incorrect token configuration. The service was healthy. The integration was not. Without separate 4xx monitoring we would never have noticed.
 
 ### Error budget thinking
@@ -110,15 +113,17 @@ Monitor:
  - Disk I/O
  - Network throughput
 
-Example:
+Example:<br>
 $$
 rate(container\_cpu\_usage\_seconds\_total[1m])
 $$
 
-and:
+and:<br>
 $$
 container\_memory\_usage\_bytes
 $$
+
+![Hidden saturation points](/assets/blog_assets/img/cloudnative/2026-03-16-monitoring-cloud-native-services-part2/hiddenSaturation.png){: w="400" h="400" }
 
 ## The Metrics that break systems most often
 As I mentioned in [my previous blog](https://www.gaurgaurav.com/2026/cloud_native/essential-monitoring-metrics-part1/), you need effective metrics. In this section I will list a few metrics that can prove useful. 
@@ -127,7 +132,7 @@ As I mentioned in [my previous blog](https://www.gaurgaurav.com/2026/cloud_nativ
 Monitor connection pool usage. When a connection pool fills up - requests queue internally, latency increases, timeouts appear, and errors follow.
 In this scenario CPU can still be 30%. Memory can still be healthy. The service still looks "green." Except users are waiting seconds for responses.
 
-####Example — Monitoring a connection pool
+#### Example — Monitoring a connection pool
 
 Micrometer automatically exposes Hikari metrics:
 
@@ -156,6 +161,8 @@ CPU throttling causes latency spikes even when CPU usage looks normal. That one 
 Most services are only as reliable as their dependencies – databases, caches, APIs, queues, and third-party integrations.
 
 When dependencies slow down, your service slows down. But if you only monitor your service, you won't see the cause. You only see the symptoms. Dependency metrics close that gap. Without them, incident investigations turn into guesswork.
+
+![Cascading failures](/assets/blog_assets/img/cloudnative/2026-03-16-monitoring-cloud-native-services-part2/cascadingFailure.png){: w="400" h="400" }
 
 ### Downstream Latency Metrics
 Every external call should have a latency metric. Even if the dependency is "reliable." Especially then.
