@@ -33,7 +33,7 @@ These two tell you something more important - **whether the system is approachin
 
 Many teams think error monitoring is simple. It is about counting failures. Raise an alert when they increase. In practice, error metrics are rarely that straightforward.
 
-The first mistake teams make is treating **all errors as equal**. They are not. Some errors are expected and some errors are harmless. Others indicate an outage in progress. Monitoring must differ between them.Otherwise alerts become noise. And noisy alerts get ignored, which defeats the entire purpose. I have seen production systems where engineers simply muted error alerts because they fired every few hours.
+The first mistake teams make is treating **all errors as equal**. They are not. Some errors are expected and some errors are harmless. Others indicate an outage in progress. Monitoring must differ between them. Otherwise alerts become noise. And noisy alerts get ignored, which defeats the entire purpose. I have seen production systems where engineers simply muted error alerts because they fired every few hours.
 
 
 ### Error rate is more important than error count
@@ -264,4 +264,4 @@ Experienced engineers eventually learn that most outages are not mysterious. The
 
 Not complexity.
 
-I hope you find these usefull, I will continue the discussion in the final blog of this series.
+I hope you find these useful, I will continue the discussion in the final blog of this series.
