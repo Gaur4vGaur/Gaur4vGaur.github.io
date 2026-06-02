@@ -27,8 +27,7 @@ The demos are not wrong. They just solve a problem that I rarely have.
 
 After six months with Gen AI tools, I have landed on something that feels uncomfortably true:
 
-Developers were never slow at writing code.
-They were slow at figuring out *where* to write it.
+*Developers were never slow at writing code. They were slow at figuring out **where** to write it.*
 
 Think about the last bug you fixed. How long did the actual code change take once you understood the problem? Five minutes? Ten? The hours were spent elsewhere. Reading unfamiliar code. Tracing execution paths. Building a mental model of the system. Validating assumptions. Eliminating false leads. The bottleneck was understanding - cognitive overhead. Not typing.
 
