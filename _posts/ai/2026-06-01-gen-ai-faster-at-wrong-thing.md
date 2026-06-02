@@ -4,7 +4,7 @@ description: We optimised for code generation speed while the real bottleneck â€
 tags: ["gen-ai", "developer-productivity", "software-engineering"]
 category: ["ai"]
 date: 2026-06-01
-permalink: '2025/ai/gen-ai-not-solving-problem-dev-have/'
+permalink: '2026/ai/gen-ai-not-solving-problem-dev-have/'
 image:
   path: /assets/blog_assets/img/ai/2026-06-01-gen-ai-faster-at-wrong-thing/coverImage.png
   width: 800
