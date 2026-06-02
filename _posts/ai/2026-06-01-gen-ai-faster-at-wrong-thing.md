@@ -11,7 +11,7 @@ image:
   height: 500
 ---
 
-It was an afternoon when one of our reconciliation flows started throwing `NullPointerExceptions` in production. The fix, once we found it, was two lines. Finding those two lines took nearly six hours. Three engineers and endless log grepping. Tracing through a JSF application that predates most of the libraries we take for granted today. No modern APIs exposed. No clean service boundary to isolate the problem. Just a chain of legacy integration points that required someone to hold the full mental map of the system in their head to understand what was breaking where.
+It was an afternoon when one of our reconciliation flows started throwing `NullPointerExceptions` in production. The fix, once we found it, was two lines. Finding those two lines took nearly six hours. Three engineers and endless log grepping. Tracing through an integration application with JSF UI that predates most of the libraries we take for granted today. No modern APIs exposed. No clean service boundary to isolate the problem. Just a chain of legacy integration points that required someone to hold the full mental map of the system in their head to understand what was breaking where.
 
 Six months into using Gen AI extensively in software delivery, I keep coming back to those production bugs. They still feel like the norm, not the exception.
 
