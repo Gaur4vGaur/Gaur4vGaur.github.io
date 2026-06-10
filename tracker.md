@@ -5,14 +5,10 @@ sitemap: false
 robots: noindex
 ---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Sync Task Tracker</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body class="bg-gray-100 min-h-screen p-4 md:p-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="bg-gray-100 min-h-screen p-4 md:p-8">
 
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
@@ -234,4 +230,4 @@ robots: noindex
 
         loadData();
     </script>
-</body>
+</div>
