@@ -3,6 +3,7 @@ layout: randompage
 permalink: /g7k9/
 sitemap: false
 robots: noindex
+compress_html: false
 ---
 
 <script src="https://cdn.tailwindcss.com"></script>
