@@ -80,7 +80,11 @@ robots: noindex
                 
                 fileSha = fileData.sha; // Capture SHA version required for saving updates
                 // Convert base64 data file to text JSON
-                tasks = JSON.parse(atob(fileData.content));
+                // Strip out any newlines or spaces added by GitHub API formatting
+                let cleanBase64 = fileData.content.replace(/\s/g, '');
+
+                // Safely convert base64 data file to text JSON
+                tasks = JSON.parse(decodeURIComponent(escape(atob(cleanBase64))));
                 
                 updateStatus("Synced with Cloud", "green");
                 renderTasks();
@@ -101,7 +105,7 @@ robots: noindex
                     },
                     body: JSON.stringify({
                         message: "Sync task changes via web panel",
-                        content: btoa(JSON.stringify(tasks)), // Encode payload to base64
+                        content: btoa(unescape(encodeURIComponent(JSON.stringify(tasks)))), // Encode payload to base64
                         sha: fileSha
                     })
                 });
