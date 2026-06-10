@@ -8,9 +8,9 @@ robots: noindex
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div class="bg-gray-100 min-h-screen p-4 md:p-8">
+<div class="bg-gray-100 min-h-screen p-4 md:p-6">
 
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
             <div class="flex justify-between items-center mb-6">
                 <h1 class="text-2xl font-bold text-gray-800">My Tasks</h1>
