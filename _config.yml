@@ -14,7 +14,7 @@ timezone: Europe/London
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Code Thoughts # the main title
+title: Beyond Code # the main title
 
 tagline: Blogs to share coding practices, programming tutorials, opinions and experiences by Gaurav Gaur # it will display as the sub-title
 
