@@ -16,7 +16,7 @@ timezone: Europe/London
 
 title: Beyond Code # the main title
 
-tagline: Blogs to share coding practices, programming tutorials, opinions and experiences by Gaurav Gaur # it will display as the sub-title
+tagline: #Blogs to share coding practices, programming tutorials, opinions and experiences by Gaurav Gaur # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog to share coding practices, programming tutorials, application design opinions, analysis and personal experiences by Gaurav Gaur
