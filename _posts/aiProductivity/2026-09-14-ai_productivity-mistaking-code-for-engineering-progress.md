@@ -63,7 +63,7 @@ Now think about what AI coding metrics would say about this. An engineer spends 
 
 [Gergely Orosz tells a revealing story](https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity) about what happens when you optimise for the wrong signal: when Uber introduced diff-count metrics, engineers started creating more, smaller changes to *look* productive — flooding CI systems and driving up costs. The metric improved. The engineering got worse. We are setting ourselves up for the same trap with AI-generated LOC.
 
-![Four GitClear stats: moved code down, duplication and error-masking up](/assets\blog_assets\img\ai\2026-09-14-ai_productivity-mistaking-code-for-engineering-progress\theRearrangementStats.jpg)
+![Four GitClear stats: moved code down, duplication and error-masking up](/assets/blog_assets/img/ai/2026-09-14-ai_productivity-mistaking-code-for-engineering-progress/theRearrangementStats.jpg)
 
 ---
 
