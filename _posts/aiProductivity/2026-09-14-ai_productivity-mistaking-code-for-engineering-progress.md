@@ -17,37 +17,35 @@ image:
 
 ---
 
-A few months ago, one of our teams celebrated a milestone in their quarterly review. AI adoption was up. The productivity dashboard showed developers were generating 40% more code per sprint. The engineering manager presented it as an unqualified win.
+A few months ago, one of our teams celebrated a milestone in their quarterly review. AI adoption was up. The productivity dashboard showed that developers were generating on an average 40% more code per sprint. The tech lead showed this as an major win.
 
-Three weeks later I was on a call, this time about a production issue. Errors were coming back in three different formats depending on which endpoint you hit. Our alerting was blind to a category of failure it had always caught before.
+Three weeks later I was on a call for a production issue. The challenges was that errors were coming in three different formats depending on which endpoint you hit. The alerting was blind to a category of failure it had always caught before.
 
-We had a centralised exception handler. One place. It logged context, mapped to the right HTTP status, and pushed alerts to our observability stack. Over the previous few weeks, AI-assisted PRs had started introducing their own try-catch blocks inline. Each one caught exceptions locally, logged in a slightly different format, returned a slightly different error shape. Some swallowed the exception instead of letting it propagate up to the handler that would have alerted us.
+We had a centralised exception handler. It logged context, mapped it to a right HTTP status, and pushed these alerts to our observability stack. When we investiagated, we found that recent AI-assisted PRs had started introducing their own try-catch blocks inline. Each one caught exceptions locally, logged in a slightly different format, returned a slightly different error shape. Some swallowed the exception instead of letting it propagate up to the handler that would have alerted us.
 
-Every one of those PRs was correct. Every one passed review, including the reviews I did myself. We were checking for correctness. Nobody was checking for consistency. Consistency is not the kind of thing that shows up in a diff.
+Each one of those PRs was correct. Every one passed review, including the reviews I did myself. We were checking for correctness. But nobody was checking for consistency. Consistency is not the kind of thing that shows up in git diff.
 
 Cleaning it up took most of a sprint. And that productivity dashboard? It counted the original generation and the cleanup as output. Twice the code, twice the "productivity", for a net loss of engineering time.
 
-The dashboard going up while the system got worse underneath it.
+The dashboard is going up while the system got worse underneath it.
 
-This is the mistake I keep seeing: confusing code production with engineering progress. The chart goes up. Everyone smiles. And nobody asks what the chart actually measures.
+This is the mistake I keep seeing, confusing code production with engineering progress. The chart goes up and nobody asks what the chart actually measures.
 
 ---
 
 ## The LOC Trap, Reloaded
 
-Fred Brooks called this out in [*The Mythical Man-Month*](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) decades ago — measuring programming productivity by lines of code is nonsensical. The industry agreed. Then somehow forgot. Why did an industry that agreed LOC was nonsense rebuild the exact same dashboard the moment AI arrived?
+Fred Brooks called this out in [*The Mythical Man-Month*](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) decades ago. He explicitly mentioned that measuring programming productivity by lines of code is nonsensical. Everyone agreed and then somehow forgot. Why are we rebuilding the exact same dashboard the moment AI arrived?
 
-Here we are, dressing up that same flawed metric with AI branding and presenting it to boards. When a team lead reports that AI tools helped produce 40% more code, the follow-up I want to hear is: *"Did we actually need 40% more code?"* Usually the answer is no. What we needed was the same outcomes with less effort. Effort in software lives overwhelmingly outside the act of typing — but I will come back to that.
+We are using the same flawed metric with AI branding and presenting it to boards. When a team lead reports that AI tools helped produce 40% more code, the follow-up I want to hear is *"Did we actually need 40% more code?"* Usually the answer is no. What we needed was the same outcomes with less effort. Effort in software lives overwhelmingly outside the act of typing. And I will come back to that later.
 
-There is a difference this time and it is worth naming. Hardly anyone defends raw line counts out loud any more. The dashboards moved on, to merged pull requests, agent tasks completed, suggestions accepted. Same instinct in a more respectable unit. Counting the artefacts of work and reporting the count as progress.
-
-Plenty of places have not moved on at all, mine included, which is how a quarterly review ends up presenting 40% more code per sprint as a result. So read LOC in this post as whatever your dashboard happens to count. The argument does not change with the unit.
+There is a difference this time and it is worth naming. Teams are not defending just line counts out loud any more. The dashboards has moved on to merged pull requests, agent tasks completed and suggestions accepted. Same instinct but in a more respectable unit. Counting the artefacts of work and reporting the count as progress.
 
 ---
 
 ## Why Senior Engineers Delete Code
 
-Here is a pattern you will recognise if you have led engineering teams for any length of time. Your best engineers — the ones you rely on for the hardest problems — often produce fewer lines of code than anyone else on the team. Some of their most impactful weeks result in *negative* line counts.
+Here is a pattern that you will recognise if you have led engineering teams for any length of time. Your best engineers often produce fewer lines of code than anyone else on the team. Some of their most impactful weeks result in *negative* line counts.
 
 That is not laziness. That is expertise. I have not fully worked out why it takes years to develop the instinct for deletion over addition, but it does.
 
@@ -57,11 +55,11 @@ Those three together describe a codebase that has stopped being rearranged. Work
 
 One correction I owe, since I quoted the earlier version of this research at people for the better part of a year. GitClear's [2024 report](https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality) predicted two-week code churn would double in the AI era. It did not double. It went up 15%. The headline projection was too aggressive, and the part almost nobody quoted, refactoring falling off a cliff, turned out worse than predicted.
 
-Senior engineers get this intuitively. Every line of code is a liability. Each one has to be read, understood, tested, maintained, and eventually migrated or deleted. The best solution often makes code disappear — a well-chosen abstraction that kills duplication, a config change that eliminates a custom implementation, or sometimes just a conversation with product that removes a requirement entirely.
+Senior engineers get this intuitively. Every line of code is a liability. Each one has to be read, understood, tested, maintained, and eventually migrated or deleted. The best solution often makes code disappear. It comes in many forms like a well-chosen abstraction that kills duplication, a config change that eliminates a custom implementation, or sometimes just a conversation with product that removes a requirement entirely.
 
 Now think about what AI coding metrics would say about this. An engineer spends a day understanding a system, realises three services can collapse into one, and deletes 4,000 lines. By every AI productivity metric in use today, that engineer had a terrible day. In reality, they may have saved the organisation months of future pain.
 
-[Gergely Orosz tells a revealing story](https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity) about what happens when you optimise for the wrong signal: when Uber introduced diff-count metrics, engineers started creating more, smaller changes to *look* productive — flooding CI systems and driving up costs. The metric improved. The engineering got worse. We are setting ourselves up for the same trap with AI-generated LOC.
+[Gergely Orosz tells a revealing story](https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity) about what happens when you optimise for the wrong signal. When Uber introduced diff-count metrics, engineers started creating more, smaller changes to *look* productive. They flooded CI systems, driving up costs. The metric improved and engineering got worse. We are setting ourselves up for the same trap with AI-generated LOC.
 
 ![Four GitClear stats: moved code down, duplication and error-masking up](/assets/blog_assets/img/ai/2026-09-14-ai_productivity-mistaking-code-for-engineering-progress/theRearrangementStats.jpg)
 
@@ -69,27 +67,23 @@ Now think about what AI coding metrics would say about this. An engineer spends 
 
 ## AI's Tendency Toward Verbose Implementations
 
-This gets worse when you look at what AI coding tools actually excel at: producing plausible code quickly. And "plausible code produced quickly" has a built-in bias toward verbosity.
+This gets worse when you look at what AI coding tools actually excel at. "Producing plausible code quickly" and this tendency has a built-in bias toward verbosity.
 
-I want to be careful here. Sometimes more code is genuinely the right call. Explicit beats implicit. A verbose but readable implementation can be better than a clever one-liner that nobody understands at 3am when they are half-awake and production is on fire. I am not arguing for code golf.
+I want to be careful here. Sometimes more code is genuinely the right call. Explicit beats implicit. A verbose but readable implementation can be better than a clever one-liner that nobody understands at 3am when production is on fire. I am not arguing for code golf.
 
-But AI-generated verbosity is a specific kind of bad. It is not *chosen* verbosity for clarity. It is *default* verbosity from ignorance of context. That distinction matters more than I initially gave it credit for.
+But AI-generated verbosity is a specific kind of bad. It is not *chosen* verbosity for clarity. It is *default* verbosity from ignorance of context. That distinction matters a lot more than I initially thought.
 
-Ask an AI assistant to implement a feature and you will get a complete, working solution. It will also be longer than what an experienced developer would write — not because it is wrong, but because it optimises for correctness and completeness in isolation. It does not know your codebase already has a utility that does exactly this. It does not realise the framework provides a one-liner if you just structure the problem slightly differently. It cannot distinguish between "I should be explicit here for readability" and "I am reinventing something that already exists three directories over."
+Ask an AI assistant to implement a feature and you will get a complete, working solution. It will also be longer than what an experienced developer would write. It happens not because it is wrong, but because it optimises for correctness and completeness in isolation. It may not choose a utility that you wrote earlier to do exactly this. It does not realise the framework provides a one-liner if you just structure the problem slightly differently. It cannot distinguish between "I should be explicit here for readability" and "I am reinventing something that already exists three directories over."
 
 The handler drift I opened with is the cleanest example I have of it. The AI did exactly what it was asked, every single time. Each PR added code, each one passed review on its own terms, and nothing was wrong inside any of them. What we lost lived across them. One handler, which is what gave us one error shape, which is what gave our alerting something to fire on. No single diff broke that. All of them together did.
 
-GitClear tracks a signal for the specific failure mode buried in there: error-masking constructs, the empty catch and the quietly swallowed exception, up 47% since 2023. Our inline handlers were precisely that. I would like to think we were an unlucky outlier. The data says we were ordinary.
-
-I am still not sure how you review for a property that is not visible in the file in front of you.
+GitClear tracks a signal for the specific failure mode buried in there, up 47% since 2023. Our inline handlers were precisely that. I would like to think we were an unlucky outlier. The data says we were ordinary. I am still not sure how you review for a property that is not visible in the file in front of you.
 
 ---
 
 ## Complexity as the Hidden Cost
 
-This is where it really hurts.
-
-Code volume is not a perfect proxy for system complexity — I acknowledged that above. But it is a *directional* one, and in aggregate it holds. When your codebase grows by 30-40% in a quarter without a corresponding growth in functionality, complexity is almost certainly growing with it. System complexity is the single biggest thing that determines how fast your team can move over time. I have not found a way around that fact in eighteen years of doing this work.
+This is where it really hurts. Code volume is not a perfect proxy for system complexity and I acknowledged that above. But it is a *directional* one, and in aggregate it holds. When your codebase grows by 30-40% in a quarter without a corresponding growth in functionality, complexity is almost certainly growing. System complexity is the single biggest thing that determines how fast your team can move over time. I have not found a way around that fact in eighteen years.
 
 Every line of code carries ongoing costs that nobody puts on a dashboard:
 
@@ -99,19 +93,17 @@ Every line of code carries ongoing costs that nobody puts on a dashboard:
 - **Dependency surface** — it may pull in libraries that need constant updating
 - **Migration cost** — it all has to be dealt with during platform changes
 
-When AI tools grow your code volume by 30-40%, every one of these costs grows with it. The productivity gain at the moment of writing is real — I am not denying that. But it can be entirely eaten up by the downstream cost of maintaining a bigger, more complex system.
+When AI tools grow your code volume by 30-40%, every one of these costs grows with it. The productivity gain at the moment of writing is real and I am not denying that. But it can be entirely eaten up by the downstream cost of maintaining a bigger, more complex system.
 
 Then there is the study I keep coming back to, and the update to it that I nearly missed.
 
-In mid-2025, [METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) found that experienced developers using AI coding tools took 19% *longer* on real-world tasks. Longer. The setup was specific: 16 open-source contributors working in their own repositories, code they had lived in for years, taking on 246 real issues that averaged about two hours each, with Cursor Pro and Claude. Bug fixes, features, refactors. Ordinary work.
-
-That number went everywhere. Mine included, more than once.
+In mid-2025, [METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) found that experienced developers using AI coding tools took 19% *longer* on real-world tasks. Longer. The setup was specific. There were 16 open-source contributors working in their own repositories, code they had lived in for years. They took 246 real issues that averaged about two hours each, with Cursor Pro and Claude. Bug fixes, features, refactors, continuing with ordinary work.
 
 In February 2026, METR [published an update](https://metr.org/blog/2026-02-24-uplift-update/) that takes a fair amount of it back. They are redesigning the experiment, and the reasons are not flattering to the original. Developers who would no longer work without AI declined to take part at all. Somewhere between 30% and 50% of participants avoided submitting exactly the tasks where they expected to want AI. The pay rate for the follow-up work dropped from $150 an hour to $50, which made recruitment worse again. Their own summary is that the newer data amounts to very weak evidence in either direction, and that developers are probably more sped up now, in early 2026, than the early-2025 estimate suggested.
 
 So the 19% was never a fact about AI-assisted development. It was a measurement of sixteen people in one setting, and the people who ran it now think it read low.
 
-What survives is the part that unsettled me in the first place. Those developers *believed* they were 20% faster. Whatever the true effect was, it was not the effect they perceived, and not one of them could feel the gap while it was happening. Reviewing, correcting and integrating suggestions consumed time that none of them accounted for. Selection bias moved the headline number around. It does not explain away a room full of experienced engineers being wrong about their own week.
+What survives is the part that makes me think harder. Those developers *believed* they were 20% faster. Whatever the true effect was, it was not the effect they perceived, and not one of them could feel the gap while it was happening. Reviewing, correcting and integrating suggestions consumed time that none of them accounted for. Selection bias moved the headline number around. It does not explain away a room full of experienced engineers being wrong about their own week.
 
 I could never square that finding with my own experience, because I do feel faster on certain tasks. The update moves me off the fence, slightly. Maybe I was not fooling myself. I would still put no weight at all on my own estimate of how much faster I am, and that is close to the only thing here I am confident about.
 
@@ -121,13 +113,11 @@ This is not a case against AI tools. It is a case against measuring them by how 
 
 ## The Strongest Number Against Me
 
-If you want to argue the other side, the best evidence available today is Microsoft's. Early in 2026 they rolled Claude Code and GitHub Copilot CLI out across the organisation and [studied what happened](https://arxiv.org/abs/2607.01418): tens of thousands of engineers, four months, and the engineers who adopted merged roughly 24% more pull requests than the counterfactual said they would have. That is not a lab. It is not sixteen volunteers. It is the largest field measurement of agentic coding tools anyone has published, and the effect is large and it points the right way.
+If you want to argue the other side, the best evidence available today is Microsoft's. Early in 2026 they rolled Claude Code and GitHub Copilot CLI out across the organisation and [studied what happened](https://arxiv.org/abs/2607.01418) with tens of thousands of engineers, four months, and the engineers who adopted merged roughly 24% more pull requests than the counterfactual said they would have. That is not a lab or small group of volunteers. It is the largest measurement of agentic coding tools anyone has published, and the effect is large and it points the right way. I take it seriously. I also notice what the unit is.
 
-I take it seriously. I also notice what the unit is.
+The authors get there ahead of any critic. Their paper says that a merged PR is not the same as the value it delivers. That is the argument of this entire post, conceded inside the study that is supposed to answer it. Twenty-four percent more merged pull requests is consistent with 24% more delivered value. It is equally consistent with the same work arriving in smaller slices, which is what happened at Uber the moment diff count landed on a dashboard.
 
-The authors get there ahead of any critic. Their paper says it plainly: a merged PR is not the same as the value it delivers. That is the argument of this entire post, conceded inside the study that is supposed to answer it. Twenty-four percent more merged pull requests is consistent with 24% more delivered value. It is equally consistent with the same work arriving in smaller slices, which is what happened at Uber the moment diff count landed on a dashboard.
-
-There are narrower caveats and I will not pretend I have chased all of them. The comparison is against engineers who already had AI in their IDE, so what it measures is the increment from adding an agent rather than the effect of AI from zero. Four months is not long enough for maintenance cost to turn up. And engineers chose for themselves whether to adopt, which is a problem large enough that a later part of this series is about nothing else.
+There are narrower caveats and I will not pretend I have chased all of them. The comparison is against engineers who already had AI in their IDE, so what it measures is the increment from adding an agent rather than the effect of AI from zero. Four months is not long enough for maintenance cost to turn up. And engineers chose for themselves whether to adopt.
 
 None of that makes the study wrong. It makes it a good measurement of pull request volume, and pull request volume behaves the way lines of code always did. Easy to report. Easy to move, if somebody decides that moving it matters. Blind to what the system underneath is doing.
 
@@ -135,7 +125,7 @@ None of that makes the study wrong. It makes it a good measurement of pull reque
 
 ## What This Actually Means If You Are Leading a Team
 
-If you are six months into your AI investment and your main evidence of ROI is that the output counter went up, whether that counter says lines or pull requests or tasks completed, I would gently suggest that should worry you more than reassure you. You might be measuring the accumulation of future cost and calling it present-day value.
+If you are six months into your AI investment and your main evidence of ROI is that the output counter went up, whether that counter says lines or pull requests or tasks completed, I would suggest that should worry you more than reassure you. You might be measuring the accumulation of future cost and calling it present-day value.
 
 Here is what I would look at instead:
 
@@ -147,7 +137,7 @@ Here is what I would look at instead:
 
 **Developer effort distribution** — Where is time actually going? If writing dropped from 20% to 10% of developer time, but code review grew from 15% to 30%, you have not reduced the burden. You have moved it.
 
-None of that is exotic, and it is not just my read. DORA's [2026 work on the ROI of AI-assisted development](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) arrives somewhere similar from a different direction: the return on these tools tracks the strength of the engineering system around them rather than the tools themselves. The things that decide it are unglamorous. Whether code review has any slack left in it. Whether people trust the test suite enough to act on a red build, which is the one I have never seen anybody audit. How much sits between a merge and production. Where those are weak, faster generation fills a queue and waits there.
+None of that is exotic, and it is not just my read. DORA's [2026 work on the ROI of AI-assisted development](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) arrives somewhere similar from a different direction. The return on these tools tracks the strength of the engineering system around them rather than the tools themselves. The things that decide it are unglamorous. Whether code review has any slack left in it. Whether people trust the test suite enough to act on a red build, which is the one I have never seen anybody audit. How much sits between a merge and production. Where those are weak, faster generation fills a queue and waits there.
 
 The measurement science here is still catching up to the tooling.
 
@@ -159,13 +149,7 @@ Here is what I would ask any engineering leader who reports AI productivity gain
 
 *"If your best engineer spent last week deleting 3,000 lines of AI-generated code and replacing them with 300 lines that do the same thing better — would your dashboard show that as a win or a loss?"*
 
-On a line count that week is a catastrophe. On a PR count it is one merged pull request, which is what a typo fix is worth too. Neither number has any way of seeing what actually happened.
-
-If your dashboard shows a loss, you are measuring the wrong thing. And you are quietly incentivising your team to build a larger, slower, more fragile system, in exchange for a chart that goes up and to the right.
-
-The goal was never more code. It was better systems, delivered faster, maintained cheaply.
-
-That dashboard from three weeks after the celebration, the one counting the cleanup as more "productivity" — I keep wondering whether anyone ever went back and reconciled those numbers. I suspect not.
+On a line count that week is a catastrophe. On a PR count it is one merged pull request, which is what a typo fix is worth too. Neither number has any way of seeing what actually happened. If your dashboard shows a loss, you are measuring the wrong thing. And you are promoting your team to build a larger, slower, more fragile system, in exchange for a chart that goes up and to the right. The goal was never more code. It was better systems, delivered faster, maintained cheaply.
 
 ---
 
