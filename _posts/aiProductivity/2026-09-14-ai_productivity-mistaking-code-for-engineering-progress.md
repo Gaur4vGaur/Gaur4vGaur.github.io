@@ -17,11 +17,11 @@ image:
 
 ---
 
-A few months ago, one of our teams celebrated a milestone in their quarterly review. AI adoption was up. The productivity dashboard showed that developers were generating on an average 40% more code per sprint. The tech lead showed this as an major win.
+A few months ago, one of our teams celebrated a milestone in their quarterly review. AI adoption was up. The productivity dashboard showed that developers were generating on average 40% more code per sprint. The tech lead showed this as a major win.
 
-Three weeks later I was on a call for a production issue. The challenges was that errors were coming in three different formats depending on which endpoint you hit. The alerting was blind to a category of failure it had always caught before.
+Three weeks later I was on a call for a production issue. The challenge was that errors were coming in three different formats depending on which endpoint you hit. The alerting was blind to a category of failure it had always caught before.
 
-We had a centralised exception handler. It logged context, mapped it to a right HTTP status, and pushed these alerts to our observability stack. When we investiagated, we found that recent AI-assisted PRs had started introducing their own try-catch blocks inline. Each one caught exceptions locally, logged in a slightly different format, returned a slightly different error shape. Some swallowed the exception instead of letting it propagate up to the handler that would have alerted us.
+We had a centralised exception handler. It logged context, mapped it to the right HTTP status, and pushed these alerts to our observability stack. When we investigated, we found that recent AI-assisted PRs had started introducing their own try-catch blocks inline. Each one caught exceptions locally, logged in a slightly different format, returned a slightly different error shape. Some swallowed the exception instead of letting it propagate up to the handler that would have alerted us.
 
 Each one of those PRs was correct. Every one passed review, including the reviews I did myself. We were checking for correctness. But nobody was checking for consistency. Consistency is not the kind of thing that shows up in git diff.
 
@@ -39,7 +39,7 @@ Fred Brooks called this out in [*The Mythical Man-Month*](https://en.wikipedia.o
 
 We are using the same flawed metric with AI branding and presenting it to boards. When a team lead reports that AI tools helped produce 40% more code, the follow-up I want to hear is *"Did we actually need 40% more code?"* Usually the answer is no. What we needed was the same outcomes with less effort. Effort in software lives overwhelmingly outside the act of typing. And I will come back to that later.
 
-There is a difference this time and it is worth naming. Teams are not defending just line counts out loud any more. The dashboards has moved on to merged pull requests, agent tasks completed and suggestions accepted. Same instinct but in a more respectable unit. Counting the artefacts of work and reporting the count as progress.
+There is a difference this time and it is worth naming. Teams are not defending just line counts out loud any more. The dashboards have moved on to merged pull requests, agent tasks completed and suggestions accepted. Same instinct but in a more respectable unit. Counting the artefacts of work and reporting the count as progress.
 
 ---
 
