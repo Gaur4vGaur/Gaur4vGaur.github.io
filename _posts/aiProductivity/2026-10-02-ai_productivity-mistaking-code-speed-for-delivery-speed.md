@@ -39,7 +39,7 @@ AI did help them find the right setting quickly, once they knew what they were l
 
 ## Requirements and Alignment is Where Delivery Actually Happens
 
-I have spent entire sprints where the most useful engineering activity was a forty-minute conversation with a product owner that stopped us building the wrong thing. Velocity stayed flat that sprint because no code got written, but that one conversation probably saved us days, maybe weeks, of wasted effort.
+A story was picked up during refinment where a bulk reprocessing screen were proposed, so the operations could retry failed invoices themselves. Before we started, I spent forty minutes with the product owner going through how they actually handled failures. It turned out almost all of them came from one region, and from a mapping that nobody owned. We fixed the mapping and dropped the screen. Velocity stayed flat that sprint because hardly any code got written, but we'd avoided weeks of building something nobody would have needed after the real fix.
 
 The hard part of most projects isn't the implementation. I wish it were. The difficutly is getting five people with different priorities to agree on what "done" means. Trade-off communication — explaining that getting a feature quickly can come at the cost of something they value even more. These activities determine whether a project ships in six weeks or six months. They require judgment and the kind of trust that only builds through repeated interactions.
 
