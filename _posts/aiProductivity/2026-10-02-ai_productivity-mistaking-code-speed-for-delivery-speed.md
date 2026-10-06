@@ -69,6 +69,8 @@ If your AI strategy is primarily "make developers write code faster," you're opt
 
 The industry is not blind to this. AI-powered log analysis, RAG over documentation, automated PR summaries, meeting transcription — these are real products solving real problems. I use several of them daily and find them genuinely helpful. But they still operate at the level of a single engineer's information access. They make it faster for *me* to find a log line or catch up on a meeting I missed. What they do not touch is the coordination layer. AI can summarise what was *said* in a meeting. It cannot surface what was *left unsaid*, and I don't think anyone has a tool for that yet.
 
+![Bottleneck moved](/assets/blog_assets/img/ai/2026-10-02-ai_productivity-mistaking-code-speed-for-delivery-speed/bottleNeckMoved.jpg)
+
 One platform team built a tool that flagged when two squads were planning changes to the same service boundary in the same sprint. It worked, and it caught real conflicts weeks before they would have broken an integration. Hardly anyone acted on the flags though. Teams didn't trust an automated warning enough to change their plans, so resolving a conflict still needed someone with enough context to get both sides to agree. We've hit the same problem with other tools too.
 
 There is a counter argument worth taking seriously: AI for coding is a stepping stone toward harder problems. I'm not fully convinced. Coding is a problem of *translation* — turning intent into instructions. Coordination is a problem of *negotiation* — reconciling competing intents. These require fundamentally different capabilities, and the risk is that you spend three years optimising the 15% while the 40% compounds.
