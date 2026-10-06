@@ -1,5 +1,5 @@
 ---
-title: Mistaking Code Production for Engineering Progress - AI Productivity Myths #1
+title: Mistaking Code Production for Engineering Progress - AI Productivity Myths
 description: Lines of code and PR counts went up after AI adoption, and so did production incidents. Why code volume is a poor proxy for engineering progress, and what GitClear's data on refactoring decline shows instead
 tags: ["gen-ai", "ai-productivity-myths", "software-engineering"]
 category: ["ai"]
@@ -125,7 +125,7 @@ On a line count that week is a catastrophe. On a PR count it is one merged pull 
 
 ---
 
-*Next in this series: **Optimising Benchmark Tasks Instead of Real Delivery Work**, on why the fact that coding is not the bottleneck makes most AI productivity claims irrelevant to actual delivery speed.*
+*Next in this series: [**Mistaking Coding Speed for Delivery Speed**](/2026/ai/ai_productivity-mistaking-code-speed-for-delivery-speed/), on why the fact that coding is not the bottleneck makes most AI productivity claims irrelevant to actual delivery speed.*
 
 **Series: AI Productivity Myths, Lessons from the Real World**
 A series examining how engineering leaders misjudge AI coding productivity, based on industry research and real-world enterprise adoption patterns.
