@@ -39,7 +39,7 @@ Adoption rate is worse. In McKinsey's 2026 survey, only 37% of [1,719 respondent
 
 Developer satisfaction is the subtlest trap. [METR's own study Feb 2026 update](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/){:target="_blank"} says the 19% slowdown from Part 1 probably read low, so I wouldn't quote it any more. What held up is the perception gap. Developers predicted a 24% speedup and afterwards still believed they'd been about 20% faster. They couldn't feel the real effect, whatever it was, so a satisfaction survey is blind to exactly the failures you care about.
 
-And beneath all of this: a [Harness survey](https://www.devopsdigest.com/ai-has-outpaced-how-engineering-organizations-measure-developer-productivity){:target="_blank"} of 700 practitioners and managers, run in April, found 81% say developers spend *more* time in code review since adopting AI coding tools. The generation phase feels productive. Fast. Satisfying. Meanwhile the total cognitive load on the team grows quietly in the background because extra reviews means more to understand. None of that shows up anywhere a decision maker would see it.
+And beneath all of this: a [Harness survey](https://www.devopsdigest.com/ai-has-outpaced-how-engineering-organizations-measure-developer-productivity){:target="_blank"} of 700 practitioners and managers, run in April, found 81% say developers spend *more* time in code review since adopting AI coding tools. The generation phase feels productive. Fast. Satisfying. Meanwhile the total cognitive load on the team grows quietly in the background because extra reviews mean more to understand. None of that shows up anywhere a decision maker would see it.
 
 The best field data I've seen is a [longitudinal study of an enterprise "2x" mandate](https://arxiv.org/abs/2607.01904){:target="_blank"}: 802 developers and 196,212 pull requests, January 2024 to April 2026. Merged PRs per developer hit 2.09 times the baseline, and per-reviewer load roughly doubled with it. Merge and revert rates held steady, so quality didn't visibly collapse. The fair reading is that the counter moved, the load moved with it, and the counter can't tell you whether the extra volume was worth carrying. Same as Microsoft's 24% in Part 1: a bigger number of the same unit is still the same unit.
 
@@ -55,7 +55,7 @@ That is outcome measurement done right. You do not ask "is the tool being used?"
 
 ## The Work That Was Previously Impossible
 
-Here is where my thinking on this shifted. The most valuable thing AI did, for another team I work with, was not making existing work faster rather it was making stuck work *possible*.
+Here is where my thinking on this shifted. The most valuable thing AI did, for another team I work with, was not making existing work faster. Rather it was making stuck work *possible*.
 
 They had eighteen months of library upgrades sitting in the backlog. Not because nobody wanted to do them. Everyone agreed the dependencies were a risk and must be prioritized. But the manual effort was enormous, estimated 3-4 sprint commitment for updating libraries, fixing breaking changes, rewriting affected tests, validating integration points. Nobody could justify pulling that many people off feature work. So the upgrades sat there, accruing risk, sprint after sprint, while everyone agreed it was important and nobody could make the economics work.
 
@@ -81,7 +81,6 @@ Andrew Diamond, in [*Software Engineering in the Age of AI*](https://adiamond.me
 
 **Series: AI Productivity Myths — Lessons from the Real World**
 A series examining how engineering leaders misjudge AI coding productivity, based on industry research and real-world enterprise adoption patterns.
-
 
 ### References
 
