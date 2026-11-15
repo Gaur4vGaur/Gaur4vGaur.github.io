@@ -25,21 +25,23 @@ I have seen the same pattern in several teams and nobody is lying. The dashboard
 
 Earlier this year, a team I worked with adopted AI tools and saw their commit velocity jump 40%. That is the kind of number that looks great in a slide deck. I know because I have seen it in several.
 
-But when I looked at their lead time — ticket creation to production deployment — it had not moved. At all. The activity counter went up and the delivery clock stayed put, because the counter was sitting upstream of the constraint. The dashboard improves. The system sits still.
+But when I looked at their lead time — ticket creation to production deployment — it had not moved at all. The activity counter went up and the delivery clock stayed, because the counter was sitting upstream of the constraint. The dashboard improves and the system sits still.
 
-To be fair, not every activity metric is useless. DORA's deployment frequency and lead time for changes correlate with delivery performance, and I've leaned on that research myself. The difference is where they sit. They measure how fast value reaches users, while commit counts and PR velocity measure churn inside the team. We picked the wrong layer.
+To be fair, not every activity metric is useless. DORA's deployment frequency and lead time for changes correlate with delivery performance, and I've leaned on that research myself. The difference is where they sit. They measure how fast value reaches users, while commit counts and PR velocity measure churn inside the team. It is that we picked the wrong layer on dashboard.
 
 ![Delivery Pipeline](/assets/blog_assets/img/ai/2026-11-02-ai_productivity-confusing-activity-metrics-with-outcomes/deliveryPipeline.png)
 
 ## The Metrics That Lie to You
 
-Commits, PRs and tickets closed all measure motion, not destination. A team can double their PR count while shipping the same user facing value. They can close more tickets by slicing work thinner without increasing total throughput. More activity in the middle. Same speed at the edges where customers actually feel it.
+Commits, PRs and tickets closed all measure motion, not destination. A team can double their PR count while shipping the same user facing value. They can close more tickets by slicing work thinner without increasing total throughput. More activity in the middle and  same speed at the edges where customers actually feel it.
 
 Adoption rate is worse. In McKinsey's 2026 survey, only 37% of [1,719 respondents](https://www.techtimes.com/articles/325590/20260826/record-ai-spending-cant-move-earnings-needle-94-enterprises-mckinsey-finds.htm){:target="_blank"} could attribute any EBIT impact to AI. Another 31% saw some impact below 5%, and just 6% cleared it. The 2025 survey landed at 39%, so a year of heavier investment moved almost nothing. Use is close to universal, whereas impact isn't.
 
-Developer satisfaction is the subtlest trap. [METR's own study Feb 2026 update](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/){:target="_blank"} says the 19% slowdown from Part 1 probably read low, so I wouldn't quote it any more. What held up is the perception gap. Developers predicted a 24% speedup and afterwards still believed they'd been about 20% faster. They couldn't feel the real effect, whatever it was, so a satisfaction survey is blind to exactly the failures you care about.
+I had a chat with my own team members. As I flagged earlier that even we were trialling GenAI tools to speed up coding tasks. Some of the individuals were pessimistic about the entire concept of coding using LLMs, while others were excited about trying their hand at the new tech. I facilitated a team meeting, and team came up with a human-in-the-loop process to make sure that we strike an equilibrium within the team. The aim is to improve developer satisfaction. Those conversations were about how the tools felt, not what they delivered, and that is exactly where measurement goes wrong.
 
-And beneath all of this: a [Harness survey](https://www.devopsdigest.com/ai-has-outpaced-how-engineering-organizations-measure-developer-productivity){:target="_blank"} of 700 practitioners and managers, run in April, found 81% say developers spend *more* time in code review since adopting AI coding tools. The generation phase feels productive. Fast. Satisfying. Meanwhile the total cognitive load on the team grows quietly in the background because extra reviews mean more to understand. None of that shows up anywhere a decision maker would see it.
+Feelings are the subtlest trap. [METR's own study Feb 2026 update](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/){:target="_blank"} says the 19% slowdown from Part 1 probably read low, so I wouldn't quote it any more. What held up is the perception gap. Developers predicted a 24% speedup and afterwards still believed they'd been about 20% faster. They couldn't feel the real effect, whatever it was, so a satisfaction survey is blind to exactly the failures you care about.
+
+And then I read this [Harness survey](https://www.devopsdigest.com/ai-has-outpaced-how-engineering-organizations-measure-developer-productivity){:target="_blank"} of 700 practitioners and managers, run in April, found 81% say developers spend *more* time in code review since adopting AI coding tools. The generation phase feels quite productive. Meanwhile the total cognitive load on the team grows quietly in the background because extra reviews mean more to understand. None of that shows up anywhere a decision maker would see it.
 
 The best field data I've seen is a [longitudinal study of an enterprise "2x" mandate](https://arxiv.org/abs/2607.01904){:target="_blank"}: 802 developers and 196,212 pull requests, January 2024 to April 2026. Merged PRs per developer hit 2.09 times the baseline, and per-reviewer load roughly doubled with it. Merge and revert rates held steady, so quality didn't visibly collapse. The fair reading is that the counter moved, the load moved with it, and the counter can't tell you whether the extra volume was worth carrying. Same as Microsoft's 24% in Part 1: a bigger number of the same unit is still the same unit.
 
@@ -47,7 +49,7 @@ The best field data I've seen is a [longitudinal study of an enterprise "2x" man
 
 That team with the 40% commit velocity increase did something more interesting than celebrate. They noticed the activity metric had moved but the outcome metric had not, and they treated that gap as a diagnostic signal rather than an inconvenience.
 
-They redirected AI usage toward the actual bottleneck: automated test generation for their integration suite, AI-assisted code review to reduce reviewer load, smaller deployment batches. Their first attempt flopped badly. They pointed Copilot at the integration tests and got a wave of green-path-only cases that passed CI but caught nothing real. The test suite *grew* 40% without improving defect escape rate at all. Forty percent more tests and zero additional safety.
+They redirected AI usage toward the actual bottleneck, on things like automated test generation for their integration suite, AI-assisted code review to reduce reviewer load, smaller deployment batches. Their first attempt flopped badly. They pointed Copilot at the integration tests and got a wave of green-path-only cases that passed CI but caught nothing real. The test suite *grew* 40% without improving defect escape rate at all. Forty percent more tests and zero additional safety.
 
 It took three weeks of pairing with QA to build prompts that generated tests against actual failure modes from their incident log. After that recalibration, lead time actually dropped. The commit count went back *down*, which looked terrible on the old dashboard. Fewer changes, but larger, better-tested, moving through the pipeline cleanly. Lead time dropped 30%, and that was the metric that mattered.
 
@@ -61,7 +63,7 @@ They had eighteen months of library upgrades sitting in the backlog. Not because
 
 AI changed those economics. What was a quarter's commitment became a two-week campaign. One developer with AI tooling worked through the dependency chain systematically. The libraries got upgraded. The security posture improved. The team moved on.
 
-That is the binary metric worth tracking: *could this team have done this six months ago?* Not faster. Not cheaper. Could they have done it at all? For that library upgrade the answer was no — the economics simply did not justify it before. Now they do.
+That is the binary metric worth tracking as in *could this team have done this six months ago?* Could they have done it at all? For that library upgrade the answer was no — the economics simply did not justify it before. Now they do.
 
 If you implement one new metric from this post, make it this one. Once a month, ask each team lead: "What did you ship this month that was previously stuck?" Not "what did you do faster" — that is an efficiency question, and efficiency gains are incremental, hard to distinguish from noise. "What did you ship that you *could not have shipped* before?" That is a capability question. The answer tells you whether AI is expanding what your engineering organisation can do, or just making it busier. The line won't always be clear, but asking the question puts you ahead of most.
 
